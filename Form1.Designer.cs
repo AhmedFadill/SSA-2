@@ -40,21 +40,21 @@
             this.reports1 = new SSA_2.reports();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.panelShowReport = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelShowReport = new System.Windows.Forms.Label();
+            this.labelMainScreen = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelListStudent = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelShow = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.panelMainScreem = new System.Windows.Forms.Panel();
+            this.panelListStudent = new System.Windows.Forms.Panel();
+            this.panelShow = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -65,16 +65,16 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.panelShowReport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
+            this.panelMainScreem.SuspendLayout();
+            this.panelListStudent.SuspendLayout();
+            this.panelShow.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -208,26 +208,27 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.panelShowReport);
             this.panel3.Controls.Add(this.panel6);
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.panel8);
-            this.panel3.Controls.Add(this.panel7);
+            this.panel3.Controls.Add(this.panelMainScreem);
+            this.panel3.Controls.Add(this.panelShow);
+            this.panel3.Controls.Add(this.panelListStudent);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 12);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(279, 636);
             this.panel3.TabIndex = 3;
             // 
-            // panel5
+            // panelShowReport
             // 
-            this.panel5.BackColor = System.Drawing.Color.Transparent;
-            this.panel5.Controls.Add(this.pictureBox9);
-            this.panel5.Controls.Add(this.label6);
-            this.panel5.Location = new System.Drawing.Point(33, 344);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(213, 48);
-            this.panel5.TabIndex = 57;
+            this.panelShowReport.BackColor = System.Drawing.Color.Transparent;
+            this.panelShowReport.Controls.Add(this.pictureBox9);
+            this.panelShowReport.Controls.Add(this.labelShowReport);
+            this.panelShowReport.Location = new System.Drawing.Point(33, 344);
+            this.panelShowReport.Name = "panelShowReport";
+            this.panelShowReport.Size = new System.Drawing.Size(213, 48);
+            this.panelShowReport.TabIndex = 57;
+            this.panelShowReport.Click += new System.EventHandler(this.panelShowReport_Click);
             // 
             // pictureBox9
             // 
@@ -240,29 +241,29 @@
             this.pictureBox9.TabIndex = 53;
             this.pictureBox9.TabStop = false;
             // 
-            // label6
+            // labelShowReport
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(48, 10);
-            this.label6.Margin = new System.Windows.Forms.Padding(10, 10, 50, 10);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 24);
-            this.label6.TabIndex = 52;
-            this.label6.Text = "عرض التقارير";
+            this.labelShowReport.AutoSize = true;
+            this.labelShowReport.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelShowReport.ForeColor = System.Drawing.Color.Black;
+            this.labelShowReport.Location = new System.Drawing.Point(48, 10);
+            this.labelShowReport.Margin = new System.Windows.Forms.Padding(10, 10, 50, 10);
+            this.labelShowReport.Name = "labelShowReport";
+            this.labelShowReport.Size = new System.Drawing.Size(100, 24);
+            this.labelShowReport.TabIndex = 52;
+            this.labelShowReport.Text = "عرض التقارير";
             // 
-            // label3
+            // labelMainScreen
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(119)))), ((int)(((byte)(219)))));
-            this.label3.Location = new System.Drawing.Point(19, 12);
-            this.label3.Margin = new System.Windows.Forms.Padding(0, 10, 50, 10);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 24);
-            this.label3.TabIndex = 46;
-            this.label3.Text = "الصفحة الرئيسية";
+            this.labelMainScreen.AutoSize = true;
+            this.labelMainScreen.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMainScreen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(119)))), ((int)(((byte)(219)))));
+            this.labelMainScreen.Location = new System.Drawing.Point(19, 12);
+            this.labelMainScreen.Margin = new System.Windows.Forms.Padding(0, 10, 50, 10);
+            this.labelMainScreen.Name = "labelMainScreen";
+            this.labelMainScreen.Size = new System.Drawing.Size(129, 24);
+            this.labelMainScreen.TabIndex = 46;
+            this.labelMainScreen.Text = "الصفحة الرئيسية";
             // 
             // pictureBox5
             // 
@@ -275,16 +276,16 @@
             this.pictureBox5.TabIndex = 48;
             this.pictureBox5.TabStop = false;
             // 
-            // label5
+            // labelListStudent
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(45, 12);
-            this.label5.Margin = new System.Windows.Forms.Padding(10, 10, 50, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 24);
-            this.label5.TabIndex = 50;
-            this.label5.Text = "قوائم الطلاب";
+            this.labelListStudent.AutoSize = true;
+            this.labelListStudent.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelListStudent.Location = new System.Drawing.Point(45, 12);
+            this.labelListStudent.Margin = new System.Windows.Forms.Padding(10, 10, 50, 10);
+            this.labelListStudent.Name = "labelListStudent";
+            this.labelListStudent.Size = new System.Drawing.Size(103, 24);
+            this.labelListStudent.TabIndex = 50;
+            this.labelListStudent.Text = "قوائم الطلاب";
             // 
             // pictureBox7
             // 
@@ -308,16 +309,16 @@
             this.pictureBox8.TabIndex = 51;
             this.pictureBox8.TabStop = false;
             // 
-            // label4
+            // labelShow
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(33, 11);
-            this.label4.Margin = new System.Windows.Forms.Padding(10, 10, 50, 10);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 24);
-            this.label4.TabIndex = 47;
-            this.label4.Text = "عرض السجلات";
+            this.labelShow.AutoSize = true;
+            this.labelShow.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelShow.Location = new System.Drawing.Point(33, 11);
+            this.labelShow.Margin = new System.Windows.Forms.Padding(10, 10, 50, 10);
+            this.labelShow.Name = "labelShow";
+            this.labelShow.Size = new System.Drawing.Size(115, 24);
+            this.labelShow.TabIndex = 47;
+            this.labelShow.Text = "عرض السجلات";
             // 
             // panel6
             // 
@@ -354,35 +355,38 @@
             this.label2.Text = "الاستاذ مرتجى جلوخان";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // panel4
+            // panelMainScreem
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.pictureBox5);
-            this.panel4.Location = new System.Drawing.Point(33, 147);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(213, 48);
-            this.panel4.TabIndex = 58;
+            this.panelMainScreem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(239)))), ((int)(((byte)(255)))));
+            this.panelMainScreem.Controls.Add(this.labelMainScreen);
+            this.panelMainScreem.Controls.Add(this.pictureBox5);
+            this.panelMainScreem.Location = new System.Drawing.Point(33, 147);
+            this.panelMainScreem.Name = "panelMainScreem";
+            this.panelMainScreem.Size = new System.Drawing.Size(213, 48);
+            this.panelMainScreem.TabIndex = 58;
+            this.panelMainScreem.Click += new System.EventHandler(this.panelMainScreem_Click);
             // 
-            // panel7
+            // panelListStudent
             // 
-            this.panel7.BackColor = System.Drawing.Color.Transparent;
-            this.panel7.Controls.Add(this.label5);
-            this.panel7.Controls.Add(this.pictureBox8);
-            this.panel7.Location = new System.Drawing.Point(33, 277);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(213, 48);
-            this.panel7.TabIndex = 58;
+            this.panelListStudent.BackColor = System.Drawing.Color.Transparent;
+            this.panelListStudent.Controls.Add(this.labelListStudent);
+            this.panelListStudent.Controls.Add(this.pictureBox8);
+            this.panelListStudent.Location = new System.Drawing.Point(33, 277);
+            this.panelListStudent.Name = "panelListStudent";
+            this.panelListStudent.Size = new System.Drawing.Size(213, 48);
+            this.panelListStudent.TabIndex = 58;
+            this.panelListStudent.Click += new System.EventHandler(this.panelListStudent_Click);
             // 
-            // panel8
+            // panelShow
             // 
-            this.panel8.BackColor = System.Drawing.Color.Transparent;
-            this.panel8.Controls.Add(this.label4);
-            this.panel8.Controls.Add(this.pictureBox7);
-            this.panel8.Location = new System.Drawing.Point(33, 211);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(213, 48);
-            this.panel8.TabIndex = 59;
+            this.panelShow.BackColor = System.Drawing.Color.Transparent;
+            this.panelShow.Controls.Add(this.labelShow);
+            this.panelShow.Controls.Add(this.pictureBox7);
+            this.panelShow.Location = new System.Drawing.Point(33, 211);
+            this.panelShow.Name = "panelShow";
+            this.panelShow.Size = new System.Drawing.Size(213, 48);
+            this.panelShow.TabIndex = 59;
+            this.panelShow.Click += new System.EventHandler(this.panelShow_Click);
             // 
             // Form1
             // 
@@ -407,8 +411,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.panelShowReport.ResumeLayout(false);
+            this.panelShowReport.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -416,12 +420,12 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
+            this.panelMainScreem.ResumeLayout(false);
+            this.panelMainScreem.PerformLayout();
+            this.panelListStudent.ResumeLayout(false);
+            this.panelListStudent.PerformLayout();
+            this.panelShow.ResumeLayout(false);
+            this.panelShow.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -438,22 +442,22 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label labelMainScreen;
+        private System.Windows.Forms.Label labelShowReport;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelListStudent;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelShow;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label label2;
         private reports reports1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panelShowReport;
+        private System.Windows.Forms.Panel panelMainScreem;
+        private System.Windows.Forms.Panel panelShow;
+        private System.Windows.Forms.Panel panelListStudent;
     }
 }
 
