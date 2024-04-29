@@ -244,5 +244,14 @@
   <ItemGroup>
     <None Include="Resources\Digital presentation-pana %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcodeclose1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_1d.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
