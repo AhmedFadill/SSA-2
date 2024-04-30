@@ -15,6 +15,12 @@ namespace SSA_2
         public Show()
         {
             InitializeComponent();
+            table_show.Rows.Add("احمد فاضل لفته","A","حاظر","لا يوجد");
+        }
+
+        private void kryptonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

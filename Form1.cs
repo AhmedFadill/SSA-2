@@ -15,17 +15,17 @@ namespace SSA_2
         public Form1()
         {
             InitializeComponent();
-            kryptonDataGridView1.Rows.Add("احمد فاضل لفته", "A", "123", true, "لا يوجد");
-            kryptonDataGridView1.Rows.Add("علي قاسم محمد", "A", "123", false, "لا يوجد");
-            kryptonDataGridView1.Rows.Add("عقيل علي خلف", "A", "123", false, "لا يوجد");
-            kryptonDataGridView1.Rows.Add("محمد علي زيد", "A", "123", false, "لا يوجد");
-            kryptonDataGridView1.Rows.Add("مهدي حيدر محمد", "A", "123", false, "لا يوجد");
-            kryptonDataGridView1.Rows.Add("عباس عزيز كتاب", "A", "123", false, "لا يوجد");
-            kryptonDataGridView1.Rows.Add("حيدر حسن كميل", "A", "123", false, "لا يوجد");
-            kryptonDataGridView1.Rows.Add("علي مهدي مظلوم", "A", "123", false, "لا يوجد");
-            kryptonDataGridView1.Rows.Add("محمد منتظر حسام", "A", "123", false, "لا يوجد");
-            kryptonDataGridView1.Rows.Add("عباس مهدي", "A", "123", false, "لا يوجد");
-            kryptonDataGridView1.Rows.Add("محمد رضا هشام", "A", "123", false, "لا يوجد");
+            table_mainscreen.Rows.Add("احمد فاضل لفته", "A", "123", true, "لا يوجد");
+            table_mainscreen.Rows.Add("علي قاسم محمد", "A", "123", false, "لا يوجد");
+            table_mainscreen.Rows.Add("عقيل علي خلف", "A", "123", false, "لا يوجد");
+            table_mainscreen.Rows.Add("محمد علي زيد", "A", "123", false, "لا يوجد");
+            table_mainscreen.Rows.Add("مهدي حيدر محمد", "A", "123", false, "لا يوجد");
+            table_mainscreen.Rows.Add("عباس عزيز كتاب", "A", "123", false, "لا يوجد");
+            table_mainscreen.Rows.Add("حيدر حسن كميل", "A", "123", false, "لا يوجد");
+            table_mainscreen.Rows.Add("علي مهدي مظلوم", "A", "123", false, "لا يوجد");
+            table_mainscreen.Rows.Add("محمد منتظر حسام", "A", "123", false, "لا يوجد");
+            table_mainscreen.Rows.Add("عباس مهدي", "A", "123", false, "لا يوجد");
+            table_mainscreen.Rows.Add("محمد رضا هشام", "A", "123", false, "لا يوجد");
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -74,6 +74,15 @@ namespace SSA_2
             labelShow.ForeColor = num == 2 ? Color.FromArgb(100, 119, 219) : Color.Black;
             labelListStudent.ForeColor = num == 3 ? Color.FromArgb(100, 119, 219) : Color.Black;
             labelShowReport.ForeColor = num == 4 ? Color.FromArgb(100, 119, 219) : Color.Black;
+
+            table_mainscreen.Visible = num==1? true: false;
+            filteer_mainscreen.Visible= num==1? true: false;
+
+            show1.Visible = num==2? true: false;
+
+            control1.Visible = num==3? true: false;
+
+            reports1.Visible = num==4? true: false;
         }
 
         private void panelMainScreem_Click(object sender, EventArgs e)
@@ -119,6 +128,11 @@ namespace SSA_2
             camera_off.Visible = true;
             camera_on.Visible = false;
             camera_barcode.Visible = false;
+        }
+
+        private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
