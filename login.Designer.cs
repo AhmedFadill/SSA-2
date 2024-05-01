@@ -30,12 +30,12 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.kryptonTextBox2 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonTextBoxPassword = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.loginButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonTextBoxEmail = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonCheckBox1 = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,35 +61,36 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // kryptonTextBox2
+            // kryptonTextBoxPassword
             // 
-            this.kryptonTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.kryptonTextBoxPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.kryptonTextBox2.Location = new System.Drawing.Point(594, 316);
-            this.kryptonTextBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.kryptonTextBox2.Name = "kryptonTextBox2";
-            this.kryptonTextBox2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Black;
-            this.kryptonTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.kryptonTextBox2.Size = new System.Drawing.Size(394, 50);
-            this.kryptonTextBox2.StateActive.Content.Color1 = System.Drawing.Color.Gray;
-            this.kryptonTextBox2.StateActive.Content.Padding = new System.Windows.Forms.Padding(10);
-            this.kryptonTextBox2.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(231)))));
-            this.kryptonTextBox2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonTextBoxPassword.Location = new System.Drawing.Point(594, 316);
+            this.kryptonTextBoxPassword.Margin = new System.Windows.Forms.Padding(0);
+            this.kryptonTextBoxPassword.Name = "kryptonTextBoxPassword";
+            this.kryptonTextBoxPassword.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Black;
+            this.kryptonTextBoxPassword.PasswordChar = '*';
+            this.kryptonTextBoxPassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.kryptonTextBoxPassword.Size = new System.Drawing.Size(394, 50);
+            this.kryptonTextBoxPassword.StateActive.Content.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBoxPassword.StateActive.Content.Padding = new System.Windows.Forms.Padding(10);
+            this.kryptonTextBoxPassword.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(231)))));
+            this.kryptonTextBoxPassword.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox2.StateCommon.Border.Rounding = 5;
-            this.kryptonTextBox2.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.kryptonTextBox2.StateCommon.Content.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10);
-            this.kryptonTextBox2.StateDisabled.Content.Color1 = System.Drawing.Color.Gray;
-            this.kryptonTextBox2.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(231)))));
-            this.kryptonTextBox2.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonTextBoxPassword.StateCommon.Border.Rounding = 5;
+            this.kryptonTextBoxPassword.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBoxPassword.StateCommon.Content.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonTextBoxPassword.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10);
+            this.kryptonTextBoxPassword.StateDisabled.Content.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBoxPassword.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(231)))));
+            this.kryptonTextBoxPassword.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox2.StateNormal.Border.Rounding = 10;
-            this.kryptonTextBox2.StateNormal.Content.Color1 = System.Drawing.Color.Gray;
-            this.kryptonTextBox2.TabIndex = 11;
-            this.kryptonTextBox2.Text = "ادخل الرمز هنا";
+            this.kryptonTextBoxPassword.StateNormal.Border.Rounding = 10;
+            this.kryptonTextBoxPassword.StateNormal.Content.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBoxPassword.TabIndex = 11;
+            this.kryptonTextBoxPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.kryptonTextBox2_KeyDown);
             // 
             // loginButton
             // 
@@ -115,6 +116,7 @@
             this.loginButton.StateTracking.Back.Color1 = System.Drawing.Color.DarkSlateBlue;
             this.loginButton.TabIndex = 14;
             this.loginButton.Values.Text = "تسجيل الدخول";
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // label1
             // 
@@ -148,41 +150,39 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tajawal", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(920, 171);
+            this.label2.Location = new System.Drawing.Point(856, 171);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 28);
+            this.label2.Size = new System.Drawing.Size(129, 28);
             this.label2.TabIndex = 12;
-            this.label2.Text = "الاسم";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label2.Text = "البريد الكتروني";
             // 
-            // kryptonTextBox1
+            // kryptonTextBoxEmail
             // 
-            this.kryptonTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.kryptonTextBoxEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.kryptonTextBox1.Location = new System.Drawing.Point(594, 202);
-            this.kryptonTextBox1.Name = "kryptonTextBox1";
-            this.kryptonTextBox1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Black;
-            this.kryptonTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.kryptonTextBox1.Size = new System.Drawing.Size(394, 50);
-            this.kryptonTextBox1.StateActive.Content.Color1 = System.Drawing.Color.Gray;
-            this.kryptonTextBox1.StateActive.Content.Padding = new System.Windows.Forms.Padding(10);
-            this.kryptonTextBox1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(231)))));
-            this.kryptonTextBox1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonTextBoxEmail.Location = new System.Drawing.Point(594, 202);
+            this.kryptonTextBoxEmail.Name = "kryptonTextBoxEmail";
+            this.kryptonTextBoxEmail.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2007Black;
+            this.kryptonTextBoxEmail.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.kryptonTextBoxEmail.Size = new System.Drawing.Size(394, 50);
+            this.kryptonTextBoxEmail.StateActive.Content.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBoxEmail.StateActive.Content.Padding = new System.Windows.Forms.Padding(10);
+            this.kryptonTextBoxEmail.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(231)))));
+            this.kryptonTextBoxEmail.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateCommon.Border.Rounding = 5;
-            this.kryptonTextBox1.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
-            this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonTextBox1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10);
-            this.kryptonTextBox1.StateDisabled.Content.Color1 = System.Drawing.Color.Gray;
-            this.kryptonTextBox1.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(231)))));
-            this.kryptonTextBox1.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonTextBoxEmail.StateCommon.Border.Rounding = 5;
+            this.kryptonTextBoxEmail.StateCommon.Content.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBoxEmail.StateCommon.Content.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonTextBoxEmail.StateCommon.Content.Padding = new System.Windows.Forms.Padding(10);
+            this.kryptonTextBoxEmail.StateDisabled.Content.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBoxEmail.StateNormal.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(221)))), ((int)(((byte)(226)))), ((int)(((byte)(231)))));
+            this.kryptonTextBoxEmail.StateNormal.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonTextBox1.StateNormal.Border.Rounding = 10;
-            this.kryptonTextBox1.StateNormal.Content.Color1 = System.Drawing.Color.Gray;
-            this.kryptonTextBox1.TabIndex = 10;
-            this.kryptonTextBox1.Text = "ادخل الاسم هنا";
+            this.kryptonTextBoxEmail.StateNormal.Border.Rounding = 10;
+            this.kryptonTextBoxEmail.StateNormal.Content.Color1 = System.Drawing.Color.Gray;
+            this.kryptonTextBoxEmail.TabIndex = 10;
             // 
             // kryptonCheckBox1
             // 
@@ -194,6 +194,7 @@
             this.kryptonCheckBox1.StateCommon.ShortText.Font = new System.Drawing.Font("Tajawal Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonCheckBox1.TabIndex = 15;
             this.kryptonCheckBox1.Values.Text = "عرض كلمة المرور";
+            this.kryptonCheckBox1.CheckedChanged += new System.EventHandler(this.kryptonCheckBox1_CheckedChanged);
             // 
             // login
             // 
@@ -201,12 +202,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1029, 574);
             this.Controls.Add(this.kryptonCheckBox1);
-            this.Controls.Add(this.kryptonTextBox2);
+            this.Controls.Add(this.kryptonTextBoxPassword);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.kryptonTextBox1);
+            this.Controls.Add(this.kryptonTextBoxEmail);
             this.Controls.Add(this.panel1);
             this.Name = "login";
             this.Text = "login";
@@ -221,12 +222,12 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox2;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBoxPassword;
         private ComponentFactory.Krypton.Toolkit.KryptonButton loginButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBox1;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox kryptonTextBoxEmail;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox kryptonCheckBox1;
     }
 }

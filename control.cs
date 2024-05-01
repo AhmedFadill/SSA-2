@@ -15,27 +15,39 @@ namespace SSA_2
         public control()
         {
             InitializeComponent();
-            kryptonDataGridView1.Rows.Add("احمد فاضل لفته", "A", "123", "لا يوجد");
-            kryptonDataGridView1.Rows.Add("علي قاسم محمد", "A", "123", "لا يوجد");
-            kryptonDataGridView1.Rows.Add("عقيل علي خلف", "A", "123", "لا يوجد");
-            kryptonDataGridView1.Rows.Add("محمد علي زيد", "A", "123",  "لا يوجد");
-            kryptonDataGridView1.Rows.Add("مهدي حيدر محمد", "A", "123",  "لا يوجد");
-            kryptonDataGridView1.Rows.Add("عباس عزيز كتاب", "A", "123",  "لا يوجد");
-            kryptonDataGridView1.Rows.Add("حيدر حسن كميل", "A", "123", "لا يوجد");
-            kryptonDataGridView1.Rows.Add("علي مهدي مظلوم", "A", "123", "لا يوجد");
-            kryptonDataGridView1.Rows.Add("محمد منتظر حسام", "A", "123", "لا يوجد");
-            kryptonDataGridView1.Rows.Add("عباس مهدي", "A", "123",  "لا يوجد");
-            kryptonDataGridView1.Rows.Add("محمد رضا هشام", "A", "123",  "لا يوجد");
+        }
+        void set(bool Stage = false, bool Type = false, bool Division = false, bool Groups = false)
+        {
+            if (Stage) DB_Functions.SetComboBox(ref kryptonComboBoxStage, DB_Functions.Load_data("select distinct [Sta] from [info]"));
+            if (Type) DB_Functions.SetComboBox(ref kryptonComboBoxType, DB_Functions.Load_data("select distinct [Typ] from [info] where [Sta]='" + kryptonComboBoxStage.Text + "'"));
+            if (Division) DB_Functions.SetComboBox(ref kryptonComboBoxDiv, DB_Functions.Load_data("select distinct [Div] from [info] where  [Sta]='" + kryptonComboBoxStage.Text + "'" + " and [Typ]='" + kryptonComboBoxType.Text + "'" ));
+            if (Groups) DB_Functions.SetComboBox(ref kryptonComboBoxGro, DB_Functions.Load_data("select distinct[Gro] from [info] where  [Sta]='" + kryptonComboBoxStage.Text + "'" + " and [Typ]='" + kryptonComboBoxType.Text + "'" + " and [Div]='" + kryptonComboBoxDiv.Text + "'" ));   
+        }
+        string id;
+        private void control_Load(object sender, EventArgs e)
+        {
+            set(Stage: true);
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
+        private void kryptonComboBoxStage_TextChanged(object sender, EventArgs e)
         {
-
+            set(Type: true);
         }
 
-        private void kryptonDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void kryptonComboBoxType_TextChanged(object sender, EventArgs e)
         {
+            set(Division: true);
+        }
 
+        private void kryptonComboBoxDiv_TextChanged(object sender, EventArgs e)
+        {
+            set(Groups: true);
+        }
+
+        private void kryptonComboBoxGro_TextChanged(object sender, EventArgs e)
+        {
+            //id = DB_Functions.Load_data("select id from [info] where  [Sta]='" + kryptonComboBoxStage.Text + "'" + " and [Typ]='" + kryptonComboBoxType.Text + "'" + " and [Div]='" + kryptonComboBoxDiv.Text + "' [Gro]='" + kryptonComboBoxGro.Text + "'").Rows[0][0].ToString();
+            kryptonDataGridView1.DataSource = DB_Functions.Load_data("select id , [Name] , [cardNum],[Note] from students where [studyInformationID]=(select id from [info] where  [Sta]='" + kryptonComboBoxStage.Text + "'" + " and [Typ]='" + kryptonComboBoxType.Text + "'" + " and [Div]='" + kryptonComboBoxDiv.Text + "' and [Gro]='" + kryptonComboBoxGro.Text + "') and [isDelete]=0");
         }
     }
 }
