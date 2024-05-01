@@ -16,7 +16,7 @@ namespace SSA_2
         {
             InitializeComponent();
         }
-
+        static public string id;
         private void label2_Click(object sender, EventArgs e)
         {
 
