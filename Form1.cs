@@ -273,7 +273,7 @@ namespace SSA_2
             {
                 foreach (DataGridViewRow data in table_mainscreen.Rows)
                 {
-                    string ab = data.Cells[4].Value.ToString() == "True" ? "1" : "0"
+                    string ab = data.Cells["PA"].Value.ToString() == "True" ? "1" : "0"
                         , q = "UPDATE [absences] SET [PA] = " + ab + ",[Note] =' " + data.Cells["notA"].Value.ToString() + "' WHERE [dateID]='" + d+ "' and lessonID = (select [colID] from [IS] where [lessonName]='" + kryptonComboBoxLes.Text + "' and [SI_ID]='" + infoid + "' and [teaID]=" + login.id + ") and [studentID]= " + data.Cells[0].Value;
                     DB_Functions.Execute(q);
                 }
