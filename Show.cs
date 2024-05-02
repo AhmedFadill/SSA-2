@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ClosedXML.Excel;
+using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +22,6 @@ namespace SSA_2
         }
         void set(bool Stage = false, bool Type = false, bool Division = false, bool Groups = false, bool Subjects = false,bool Date=false)
         {
-
             if (Stage) DB_Functions.SetComboBox(ref kryptonComboBoxStage, DB_Functions.Load_data("select distinct [Sta] from [SA] where [teacherID]=" + login.id ));
             if (Type) DB_Functions.SetComboBox(ref kryptonComboBoxType, DB_Functions.Load_data("select distinct [Typ] from [SA] where [teacherID]=" + login.id + " and [Sta]='" + kryptonComboBoxStage.Text +"'" ));
             if (Division) DB_Functions.SetComboBox(ref kryptonComboBoxDiv, DB_Functions.Load_data("select [Div] from [SA] where [teacherID]= " + login.id + " and [Sta]='" + kryptonComboBoxStage.Text + "'" + " and [Typ]='" + kryptonComboBoxType.Text + "'" + "  group by [Div];"));
@@ -63,6 +64,38 @@ namespace SSA_2
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
             set(Stage: true);
+        }
+
+        private void kryptonTextBox3_TextChanged(object sender, EventArgs e)
+        {
+            (table_show.DataSource as DataTable).DefaultView.RowFilter = string.Format("[اسم الطالب] like '" + kryptonTextBox3.Text + "%'");
+
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            DataTable dt = (table_show.DataSource as DataTable);
+
+            using (SaveFileDialog std = new SaveFileDialog() { Filter = "Excel|*.xlsx" })
+            {
+                std.FileName = "تقرير  " + kryptonComboBoxType.Text;
+                if (std.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        using (XLWorkbook wk = new XLWorkbook())
+                        {
+                            wk.Worksheets.Add(dt, "التقرير");
+                            wk.SaveAs(std.FileName);
+                        }
+                        MessageBox.Show(".تم تحويل البيانات الى ملف اكسل بنجاح");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
         }
     }
 }

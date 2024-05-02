@@ -1,9 +1,11 @@
 ﻿using AForge.Video;
 using AForge.Video.DirectShow;
+using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Reflection.Emit;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using ZXing;
@@ -15,14 +17,13 @@ namespace SSA_2
         public Form1()
         {
             InitializeComponent();
-            login.id = "1";
         }
         //Variables
         static public SqlConnection sqlcon = DB_Functions.Connection();
         private FilterInfoCollection filterInfoCollection;
         private VideoCaptureDevice device;
-        string test, infoid;
-        bool isedit;
+        string test, infoid,id=login.id;
+        bool isedit=false;
 
 
 
@@ -30,15 +31,17 @@ namespace SSA_2
         void Load_data_specific()
         {
             DataTable data;
-            data = DB_Functions.Load_data("SELECT [studentID] ,[Name],[cardNum],[notS],[PA],[notA] FROM SA  where [teacherID] = " + login.id
-                + "and [Date]='" + kryptonDateTimePicker1.Value + "'  " + "and infID = " + login.id);
+            data = DB_Functions.Load_data("SELECT [studentID] ,[Name],[cardNum],[notS],[PA],[notA] FROM SA  where [teacherID] = " + id
+                + "and [Date]='" + kryptonDateTimePicker1.Value.ToString("yy-MM-dd dddd") + "'  " + "and infID = " + infoid);
             if (data.Rows.Count > 0)
             {
                 isedit = true;
+                data = DB_Functions.Load_data("select [studentID] ,Name,cardNum,[notS],[notA]  from [SA] where Date='" + kryptonDateTimePicker1.Value.ToString("yy-MM-dd dddd") +"' and infID="+infoid+ " and [lessonName]='"+kryptonComboBoxLes.Text+"'");
+                data.Columns.Add("PA", typeof(bool));
                 for (int i = 0; i < data.Rows.Count; i++)
                 {
-                    data.Rows[i]["PA"] = data.Rows[i][4].ToString() == "حاضر";
-                    data.Rows[i]["notA"] = data.Rows[i][5];
+                    string p=DB_Functions.Load_data("select PA from [SA] where Date='" + kryptonDateTimePicker1.Value.ToString("yy-MM-dd dddd") + "' and infID=" + infoid + " and [lessonName]='" + kryptonComboBoxLes.Text + "' and [studentID]=" + data.Rows[i][0]).Rows[0][0].ToString();
+                    data.Rows[i]["PA"] = p == "حاضر";
                 }
             }
             else
@@ -55,10 +58,10 @@ namespace SSA_2
             }
             table_mainscreen.DataSource = data;
             table_mainscreen.Columns["studentID"].Visible = false;
-            table_mainscreen.Columns["Name"].Width = 400;
+            table_mainscreen.Columns["Name"].Width = 200;
             table_mainscreen.Columns["Name"].HeaderText = "اسم الطالب";
             table_mainscreen.Columns["cardNum"].HeaderText = "رقم البطاقة";
-            table_mainscreen.Columns["notS"].HeaderText = "الملومات الاضافية";
+            table_mainscreen.Columns["notS"].HeaderText = "المعلومات الاضافية";
             if (table_mainscreen.Columns.Contains("PA") == true)
             {
                 table_mainscreen.Columns["PA"].HeaderText = "الغياب";
@@ -78,18 +81,19 @@ namespace SSA_2
             device.NewFrame += VideoCaptureDevice_NewFrame;
             device.Start();
         }
-        private string Check(string card_number)
+        private string Check(string card_number, bool beep = true)
         {
             for (int i = 0; i < table_mainscreen.Rows.Count; i++)
             {
-                if (table_mainscreen.Rows[i].Cells[2].Value.ToString() == card_number)
+                if (table_mainscreen.Rows[i].Cells["cardNum"].Value.ToString() == card_number)
                 {
-                    table_mainscreen.Rows[i].Cells[4].Value = CheckState.Checked;
-                    Console.Beep(500, 750);
-                    return table_mainscreen.Rows[i].Cells[1].Value.ToString();
+                    name_student.Visible = true;
+                    table_mainscreen.Rows[i].Cells["PA"].Value = true;
+                    if (beep) Console.Beep(500, 750);
+                    return table_mainscreen.Rows[i].Cells["Name"].Value.ToString();
                 }
             }
-            Console.Beep(1000, 1000);
+            if (beep) Console.Beep(1000, 1000);
             return "البطاقة غير معرفة";
         }
         private void VideoCaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
@@ -119,13 +123,31 @@ namespace SSA_2
         void set(bool Stage = false, bool Type = false, bool Division = false, bool Groups = false, bool Subjects = false)
         {
 
-            if (Stage) DB_Functions.SetComboBox(ref kryptonComboBoxStage, DB_Functions.Load_data("select [Sta] from [IS] where [teaID]=" + login.id + " group by [Sta];"));
-            if (Type) DB_Functions.SetComboBox(ref kryptonComboBoxType, DB_Functions.Load_data("select [Typ] from [IS] where [teaID]=" + login.id + " and [Sta]='" + kryptonComboBoxStage.Text + "' group by [Typ];"));
-            if (Division) DB_Functions.SetComboBox(ref kryptonComboBoxDiv, DB_Functions.Load_data("select [Div] from [IS] where [teaID]= " + login.id + " and [Sta]='" + kryptonComboBoxStage.Text + "'" + " and [Typ]='" + kryptonComboBoxType.Text + "'" + "  group by [Div];"));
-            if (Groups) DB_Functions.SetComboBox(ref kryptonComboBoxGro, DB_Functions.Load_data("select [Gro] from [IS] where [teaID]= " + login.id + " and [Sta]='" + kryptonComboBoxStage.Text + "'" + " and [Typ]='" + kryptonComboBoxType.Text + "'" + " and [Div]='" + kryptonComboBoxDiv.Text + "'" + "  group by [Gro];"));
-            if (Subjects) DB_Functions.SetComboBox(ref kryptonComboBoxLes, DB_Functions.Load_data("select distinct [lessonName] from [IS] where [teaID]=" + login.id + " and [Sta]='" + kryptonComboBoxStage.Text + "'" + " and [Typ]='" + kryptonComboBoxType.Text + "'" + " and [Div]='" + kryptonComboBoxDiv.Text + "' and [Gro]='" + kryptonComboBoxGro.Text + "'"));
+            if (Stage) DB_Functions.SetComboBox(ref kryptonComboBoxStage, DB_Functions.Load_data("select [Sta] from [IS] where [teaID]=" + id + " group by [Sta];"));
+            if (Type) DB_Functions.SetComboBox(ref kryptonComboBoxType, DB_Functions.Load_data("select [Typ] from [IS] where [teaID]=" + id + " and [Sta]='" + kryptonComboBoxStage.Text + "' group by [Typ];"));
+            if (Division) DB_Functions.SetComboBox(ref kryptonComboBoxDiv, DB_Functions.Load_data("select [Div] from [IS] where [teaID]= " + id + " and [Sta]='" + kryptonComboBoxStage.Text + "'" + " and [Typ]='" + kryptonComboBoxType.Text + "'" + "  group by [Div];"));
+            if (Groups) DB_Functions.SetComboBox(ref kryptonComboBoxGro, DB_Functions.Load_data("select [Gro] from [IS] where [teaID]= " + id + " and [Sta]='" + kryptonComboBoxStage.Text + "'" + " and [Typ]='" + kryptonComboBoxType.Text + "'" + " and [Div]='" + kryptonComboBoxDiv.Text + "'" + "  group by [Gro];"));
+            if (Subjects) DB_Functions.SetComboBox(ref kryptonComboBoxLes, DB_Functions.Load_data("select distinct [lessonName] from [IS] where [teaID]=" + id + " and [Sta]='" + kryptonComboBoxStage.Text + "'" + " and [Typ]='" + kryptonComboBoxType.Text + "'" + " and [Div]='" + kryptonComboBoxDiv.Text + "' and [Gro]='" + kryptonComboBoxGro.Text + "'"));
         }
 
+
+
+        string barcode;
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            char c = (char)keyData;
+
+            if (char.IsNumber(c))
+            {
+                barcode += c;
+            }
+            if (c == (char)Keys.Return && !string.IsNullOrEmpty(barcode))
+            {
+                name_student.Text = Check(barcode, false);
+                barcode = "";
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
 
         //Event
         private void SideBarControll(int num)
@@ -184,7 +206,8 @@ namespace SSA_2
         {
             camera_off.Visible = false;
             camera_on.Visible = true;
-            panel7.Visible = true;
+            camera_barcode.Visible = true;
+            cbocamera.Visible= true;
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             cbocamera.Items.Clear();
             foreach (FilterInfo item in filterInfoCollection)
@@ -199,7 +222,11 @@ namespace SSA_2
         {
             camera_off.Visible = true;
             camera_on.Visible = false;
-            panel7.Visible = false;
+            camera_barcode.Visible = false;
+            cbocamera.Visible = false;
+            if (device != null)
+                if (device.IsRunning)
+                    device.Stop();
         }
 
         private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
@@ -210,6 +237,8 @@ namespace SSA_2
         private void Form1_Load(object sender, EventArgs e)
         {
             set(Stage:true);
+            kryptonDateTimePicker1.Value = DateTime.Now;
+            label2.Text=DB_Functions.Load_data("select Name from teachers where id =" + id).Rows[0][0].ToString();
         }
 
         private void kryptonComboBoxStage_TextChanged(object sender, EventArgs e)
@@ -229,14 +258,55 @@ namespace SSA_2
 
         private void kryptonComboBoxGro_TextChanged(object sender, EventArgs e)
         {
-            set(Subjects:true);
             DataTable data = DB_Functions.Load_data("SELECT id FROM [info] where Sta='" + kryptonComboBoxStage.Text + "'" + " and [Typ]='" + kryptonComboBoxType.Text + "'" + " and [Div]='" + kryptonComboBoxDiv.Text + "'" + " and [Gro]='" + kryptonComboBoxGro.Text + "'");
             if (data.Rows.Count > 0) infoid = data.Rows[0][0].ToString();
+            set(Subjects:true);
+            
+        }
+
+        private void kryptonButton1_Click(object sender, EventArgs e)
+        {
+            string d = DB_Functions.Load_data("if not exists (select * from dates where [Date]='" + kryptonDateTimePicker1.Value.ToString("yy-MM-dd dddd") + "')" +
+                                                "begin INSERT INTO [dbo].[dates]([Date])output INSERTED.id VALUES('" + kryptonDateTimePicker1.Value.ToString("yy-MM-dd dddd") + "'); end " +
+                                                "else begin select [id] from dates where [Date]='" + kryptonDateTimePicker1.Value.ToString("yy-MM-dd dddd") + "'; end").Rows[0][0].ToString();
+            if (isedit)
+            {
+                foreach (DataGridViewRow data in table_mainscreen.Rows)
+                {
+                    string ab = data.Cells[4].Value.ToString() == "True" ? "1" : "0"
+                        , q = "UPDATE [absences] SET [PA] = " + ab + ",[Note] =' " + data.Cells["notA"].Value.ToString() + "' WHERE [dateID]='" + d+ "' and lessonID = (select [colID] from [IS] where [lessonName]='" + kryptonComboBoxLes.Text + "' and [SI_ID]='" + infoid + "' and [teaID]=" + login.id + ") and [studentID]= " + data.Cells[0].Value;
+                    DB_Functions.Execute(q);
+                }
+            }
+            else
+            {
+                foreach (DataGridViewRow data in table_mainscreen.Rows)
+                {
+                    string ab = data.Cells["PA"].Value.ToString() == "True" ? "1" : "0"
+                        , q = "INSERT INTO [dbo].[absences]([studentID],[dateID],[lessonID],[PA],Note)" +
+                        "VALUES(" + data.Cells["studentID"].Value + "," + d +
+                        ",(select [colID] from [IS] where [lessonName]='" + kryptonComboBoxLes.Text + "' and [SI_ID]='" + infoid + "' and [teaID]=" + login.id + ")," + ab + ",'" + data.Cells["notA"].Value + "')";
+                    DB_Functions.Execute(q);
+                }
+            }
+            MessageBox.Show("تم اضافة الحضورة", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Load_data_specific();
+        }
+
+        private void kryptonDateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            Load_data_specific();
+        }
+
+        private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            (table_mainscreen.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Name] like '" + kryptonTextBox1.Text + "%'");
+
         }
 
         private void kryptonComboBoxLes_TextChanged(object sender, EventArgs e)
         {
+            Load_data_specific();
 
         }
     }

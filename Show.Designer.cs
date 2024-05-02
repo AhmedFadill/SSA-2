@@ -235,7 +235,7 @@
             this.kryptonTextBox3.StateCommon.Content.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox3.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, 4, -1, 4);
             this.kryptonTextBox3.TabIndex = 7;
-            this.kryptonTextBox3.Text = "البحث عن طالب";
+            this.kryptonTextBox3.TextChanged += new System.EventHandler(this.kryptonTextBox3_TextChanged);
             // 
             // panel3
             // 
@@ -502,6 +502,7 @@
             this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Tajawal", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton1.TabIndex = 13;
             this.kryptonButton1.Values.Text = "تصدير اكسل";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // panel4
             // 

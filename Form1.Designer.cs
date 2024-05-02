@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -40,6 +40,9 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.reports1 = new SSA_2.reports();
+            this.control1 = new SSA_2.control();
+            this.show1 = new SSA_2.Show();
             this.table_mainscreen = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.filteer_mainscreen = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -73,12 +76,9 @@
             this.labelListStudent = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.cbocamera = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.name_student = new System.Windows.Forms.Label();
             this.camera_barcode = new System.Windows.Forms.PictureBox();
-            this.cbocamera = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.reports1 = new SSA_2.reports();
-            this.control1 = new SSA_2.control();
-            this.show1 = new SSA_2.Show();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -113,8 +113,8 @@
             this.panelListStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.camera_barcode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbocamera)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.camera_barcode)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -209,7 +209,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.8176615F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 99.18233F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -241,8 +241,35 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(11, 11);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(970, 639);
+            this.panel4.Size = new System.Drawing.Size(968, 639);
             this.panel4.TabIndex = 1;
+            // 
+            // reports1
+            // 
+            this.reports1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reports1.Location = new System.Drawing.Point(0, 85);
+            this.reports1.Name = "reports1";
+            this.reports1.Size = new System.Drawing.Size(968, 554);
+            this.reports1.TabIndex = 6;
+            this.reports1.Visible = false;
+            // 
+            // control1
+            // 
+            this.control1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.control1.Location = new System.Drawing.Point(0, 85);
+            this.control1.Name = "control1";
+            this.control1.Size = new System.Drawing.Size(968, 554);
+            this.control1.TabIndex = 5;
+            this.control1.Visible = false;
+            // 
+            // show1
+            // 
+            this.show1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.show1.Location = new System.Drawing.Point(0, 85);
+            this.show1.Name = "show1";
+            this.show1.Size = new System.Drawing.Size(968, 554);
+            this.show1.TabIndex = 4;
+            this.show1.Visible = false;
             // 
             // table_mainscreen
             // 
@@ -260,12 +287,12 @@
             this.table_mainscreen.Name = "table_mainscreen";
             this.table_mainscreen.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.table_mainscreen.RowHeadersVisible = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.table_mainscreen.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.table_mainscreen.Size = new System.Drawing.Size(970, 554);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.table_mainscreen.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.table_mainscreen.Size = new System.Drawing.Size(968, 554);
             this.table_mainscreen.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.table_mainscreen.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.table_mainscreen.StateCommon.DataCell.Back.Color1 = System.Drawing.Color.White;
@@ -294,7 +321,7 @@
             this.filteer_mainscreen.Dock = System.Windows.Forms.DockStyle.Top;
             this.filteer_mainscreen.Location = new System.Drawing.Point(0, 0);
             this.filteer_mainscreen.Name = "filteer_mainscreen";
-            this.filteer_mainscreen.Size = new System.Drawing.Size(970, 85);
+            this.filteer_mainscreen.Size = new System.Drawing.Size(968, 85);
             this.filteer_mainscreen.TabIndex = 2;
             // 
             // panel5
@@ -304,16 +331,16 @@
             this.panel5.Controls.Add(this.kryptonDateTimePicker1);
             this.panel5.Controls.Add(this.kryptonButton1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(566, 0);
+            this.panel5.Location = new System.Drawing.Point(550, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(404, 85);
+            this.panel5.Size = new System.Drawing.Size(418, 85);
             this.panel5.TabIndex = 15;
             // 
             // camera_on
             // 
             this.camera_on.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.camera_on.Image = global::SSA_2.Properties.Resources.barcodeopen;
-            this.camera_on.Location = new System.Drawing.Point(2, 5);
+            this.camera_on.Location = new System.Drawing.Point(9, 5);
             this.camera_on.Margin = new System.Windows.Forms.Padding(500, 3, 0, 3);
             this.camera_on.Name = "camera_on";
             this.camera_on.Size = new System.Drawing.Size(127, 68);
@@ -327,7 +354,7 @@
             // 
             this.camera_off.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.camera_off.Image = global::SSA_2.Properties.Resources.barcodeclose;
-            this.camera_off.Location = new System.Drawing.Point(2, 5);
+            this.camera_off.Location = new System.Drawing.Point(9, 5);
             this.camera_off.Margin = new System.Windows.Forms.Padding(500, 3, 0, 3);
             this.camera_off.Name = "camera_off";
             this.camera_off.Size = new System.Drawing.Size(127, 68);
@@ -338,12 +365,13 @@
             // 
             // kryptonDateTimePicker1
             // 
-            this.kryptonDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(139, 18);
+            this.kryptonDateTimePicker1.CustomFormat = "yy-MM-dd  dddd";
+            this.kryptonDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.kryptonDateTimePicker1.Location = new System.Drawing.Point(140, 21);
             this.kryptonDateTimePicker1.Name = "kryptonDateTimePicker1";
             this.kryptonDateTimePicker1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Silver;
             this.kryptonDateTimePicker1.ShowUpDown = true;
-            this.kryptonDateTimePicker1.Size = new System.Drawing.Size(133, 37);
+            this.kryptonDateTimePicker1.Size = new System.Drawing.Size(175, 37);
             this.kryptonDateTimePicker1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(119)))), ((int)(((byte)(219)))));
             this.kryptonDateTimePicker1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -353,10 +381,12 @@
             this.kryptonDateTimePicker1.StateCommon.Content.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonDateTimePicker1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
             this.kryptonDateTimePicker1.TabIndex = 14;
+            this.kryptonDateTimePicker1.ValueNullable = new System.DateTime(2024, 5, 2, 0, 0, 0, 0);
+            this.kryptonDateTimePicker1.ValueChanged += new System.EventHandler(this.kryptonDateTimePicker1_ValueChanged);
             // 
             // kryptonButton1
             // 
-            this.kryptonButton1.Location = new System.Drawing.Point(294, 18);
+            this.kryptonButton1.Location = new System.Drawing.Point(321, 21);
             this.kryptonButton1.Name = "kryptonButton1";
             this.kryptonButton1.Size = new System.Drawing.Size(94, 37);
             this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(119)))), ((int)(((byte)(219)))));
@@ -370,6 +400,7 @@
             this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Tajawal", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton1.TabIndex = 13;
             this.kryptonButton1.Values.Text = "حفظ";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // panel8
             // 
@@ -414,7 +445,7 @@
             // pictureBox10
             // 
             this.pictureBox10.Image = global::SSA_2.Properties.Resources.icon_search;
-            this.pictureBox10.Location = new System.Drawing.Point(385, 28);
+            this.pictureBox10.Location = new System.Drawing.Point(371, 26);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(32, 21);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -448,7 +479,7 @@
             // 
             // kryptonTextBox1
             // 
-            this.kryptonTextBox1.Location = new System.Drawing.Point(379, 21);
+            this.kryptonTextBox1.Location = new System.Drawing.Point(365, 19);
             this.kryptonTextBox1.Name = "kryptonTextBox1";
             this.kryptonTextBox1.Size = new System.Drawing.Size(185, 35);
             this.kryptonTextBox1.StateCommon.Border.Color1 = System.Drawing.Color.Black;
@@ -461,7 +492,7 @@
             this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, 4, -1, 4);
             this.kryptonTextBox1.TabIndex = 7;
-            this.kryptonTextBox1.Text = "البحث عن طالب";
+            this.kryptonTextBox1.TextChanged += new System.EventHandler(this.kryptonTextBox1_TextChanged);
             // 
             // kryptonComboBoxStage
             // 
@@ -628,12 +659,15 @@
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(68, 74);
+            this.label2.Location = new System.Drawing.Point(90, 74);
             this.label2.Margin = new System.Windows.Forms.Padding(70, 10, 60, 20);
             this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label2.Size = new System.Drawing.Size(151, 22);
             this.label2.TabIndex = 7;
             this.label2.Text = "الاستاذ مرتجى جلوخان";
@@ -748,31 +782,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(279, 225);
             this.panel7.TabIndex = 60;
-            this.panel7.Visible = false;
-            // 
-            // name_student
-            // 
-            this.name_student.AutoSize = true;
-            this.name_student.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name_student.Location = new System.Drawing.Point(85, 199);
-            this.name_student.Margin = new System.Windows.Forms.Padding(70, 10, 60, 20);
-            this.name_student.Name = "name_student";
-            this.name_student.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_student.Size = new System.Drawing.Size(61, 22);
-            this.name_student.TabIndex = 8;
-            this.name_student.Text = "الاسم : ";
-            // 
-            // camera_barcode
-            // 
-            this.camera_barcode.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.camera_barcode.Image = global::SSA_2.Properties.Resources.icon_1d;
-            this.camera_barcode.Location = new System.Drawing.Point(56, 47);
-            this.camera_barcode.Margin = new System.Windows.Forms.Padding(500, 3, 0, 3);
-            this.camera_barcode.Name = "camera_barcode";
-            this.camera_barcode.Size = new System.Drawing.Size(170, 139);
-            this.camera_barcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.camera_barcode.TabIndex = 8;
-            this.camera_barcode.TabStop = false;
             // 
             // cbocamera
             // 
@@ -797,33 +806,32 @@
             this.cbocamera.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.cbocamera.TabIndex = 15;
             this.cbocamera.Text = "المادة";
+            this.cbocamera.Visible = false;
             // 
-            // reports1
+            // name_student
             // 
-            this.reports1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reports1.Location = new System.Drawing.Point(0, 85);
-            this.reports1.Name = "reports1";
-            this.reports1.Size = new System.Drawing.Size(970, 554);
-            this.reports1.TabIndex = 6;
-            this.reports1.Visible = false;
+            this.name_student.AutoSize = true;
+            this.name_student.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_student.Location = new System.Drawing.Point(85, 199);
+            this.name_student.Margin = new System.Windows.Forms.Padding(70, 10, 60, 20);
+            this.name_student.Name = "name_student";
+            this.name_student.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.name_student.Size = new System.Drawing.Size(61, 22);
+            this.name_student.TabIndex = 8;
+            this.name_student.Text = "الاسم : ";
             // 
-            // control1
+            // camera_barcode
             // 
-            this.control1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.control1.Location = new System.Drawing.Point(0, 85);
-            this.control1.Name = "control1";
-            this.control1.Size = new System.Drawing.Size(970, 554);
-            this.control1.TabIndex = 5;
-            this.control1.Visible = false;
-            // 
-            // show1
-            // 
-            this.show1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.show1.Location = new System.Drawing.Point(0, 85);
-            this.show1.Name = "show1";
-            this.show1.Size = new System.Drawing.Size(970, 554);
-            this.show1.TabIndex = 4;
-            this.show1.Visible = false;
+            this.camera_barcode.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.camera_barcode.Image = global::SSA_2.Properties.Resources.icon_1d;
+            this.camera_barcode.Location = new System.Drawing.Point(56, 47);
+            this.camera_barcode.Margin = new System.Windows.Forms.Padding(500, 3, 0, 3);
+            this.camera_barcode.Name = "camera_barcode";
+            this.camera_barcode.Size = new System.Drawing.Size(170, 139);
+            this.camera_barcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.camera_barcode.TabIndex = 8;
+            this.camera_barcode.TabStop = false;
+            this.camera_barcode.Visible = false;
             // 
             // Form1
             // 
@@ -880,8 +888,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.camera_barcode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbocamera)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.camera_barcode)).EndInit();
             this.ResumeLayout(false);
 
         }

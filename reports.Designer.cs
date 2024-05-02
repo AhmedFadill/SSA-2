@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.name_student = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.kryptonComboBoxGro = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonComboBoxDiv = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonComboBoxLes = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonComboBoxType = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonComboBoxStage = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
-            this.kryptonComboBoxGro = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.name_student = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             this.panel7.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxGro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxDiv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxLes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxStage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxGro)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // kryptonDataGridView1
@@ -74,11 +74,11 @@
             this.kryptonDataGridView1.ReadOnly = true;
             this.kryptonDataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.kryptonDataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.kryptonDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.kryptonDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.kryptonDataGridView1.Size = new System.Drawing.Size(994, 584);
             this.kryptonDataGridView1.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.kryptonDataGridView1.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
@@ -110,76 +110,6 @@
             this.panel7.Size = new System.Drawing.Size(994, 89);
             this.panel7.TabIndex = 8;
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.name_student);
-            this.panel5.Controls.Add(this.pictureBox4);
-            this.panel5.Controls.Add(this.kryptonButton2);
-            this.panel5.Controls.Add(this.kryptonButton1);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(490, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(504, 89);
-            this.panel5.TabIndex = 15;
-            // 
-            // name_student
-            // 
-            this.name_student.AutoSize = true;
-            this.name_student.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name_student.Location = new System.Drawing.Point(432, 60);
-            this.name_student.Margin = new System.Windows.Forms.Padding(70, 10, 60, 20);
-            this.name_student.Name = "name_student";
-            this.name_student.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_student.Size = new System.Drawing.Size(52, 22);
-            this.name_student.TabIndex = 17;
-            this.name_student.Text = "تحديث";
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox4.Image = global::SSA_2.Properties.Resources._4158274081579697363_128;
-            this.pictureBox4.Location = new System.Drawing.Point(432, 14);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(500, 3, 0, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(49, 40);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 16;
-            this.pictureBox4.TabStop = false;
-            // 
-            // kryptonButton2
-            // 
-            this.kryptonButton2.Location = new System.Drawing.Point(86, 18);
-            this.kryptonButton2.Name = "kryptonButton2";
-            this.kryptonButton2.Size = new System.Drawing.Size(140, 40);
-            this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(119)))), ((int)(((byte)(219)))));
-            this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(119)))), ((int)(((byte)(219)))));
-            this.kryptonButton2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton2.StateCommon.Border.Rounding = 20;
-            this.kryptonButton2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-5);
-            this.kryptonButton2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Tajawal", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton2.TabIndex = 15;
-            this.kryptonButton2.Values.Text = "شروط الحالة";
-            // 
-            // kryptonButton1
-            // 
-            this.kryptonButton1.Location = new System.Drawing.Point(248, 19);
-            this.kryptonButton1.Name = "kryptonButton1";
-            this.kryptonButton1.Size = new System.Drawing.Size(131, 40);
-            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(119)))), ((int)(((byte)(219)))));
-            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(119)))), ((int)(((byte)(219)))));
-            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
-            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonButton1.StateCommon.Border.Rounding = 20;
-            this.kryptonButton1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-5);
-            this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
-            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Tajawal", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonButton1.TabIndex = 13;
-            this.kryptonButton1.Values.Text = "تصدير اكسل";
-            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.kryptonComboBoxGro);
@@ -194,6 +124,31 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(570, 89);
             this.panel8.TabIndex = 12;
+            // 
+            // kryptonComboBoxGro
+            // 
+            this.kryptonComboBoxGro.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonGallery;
+            this.kryptonComboBoxGro.DropDownWidth = 119;
+            this.kryptonComboBoxGro.Location = new System.Drawing.Point(134, 42);
+            this.kryptonComboBoxGro.Name = "kryptonComboBoxGro";
+            this.kryptonComboBoxGro.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.kryptonComboBoxGro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.kryptonComboBoxGro.Size = new System.Drawing.Size(126, 30);
+            this.kryptonComboBoxGro.StateActive.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
+            this.kryptonComboBoxGro.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonComboBoxGro.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonComboBoxGro.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonComboBoxGro.StateCommon.ComboBox.Border.Rounding = 3;
+            this.kryptonComboBoxGro.StateCommon.ComboBox.Border.Width = 1;
+            this.kryptonComboBoxGro.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Tajawal", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonComboBoxGro.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
+            this.kryptonComboBoxGro.StateCommon.DropBack.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kryptonComboBoxGro.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
+            this.kryptonComboBoxGro.TabIndex = 16;
+            this.kryptonComboBoxGro.Text = "المادة";
+            this.kryptonComboBoxGro.TextChanged += new System.EventHandler(this.kryptonComboBoxGro_TextChanged);
             // 
             // kryptonComboBoxDiv
             // 
@@ -270,7 +225,7 @@
             this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, 4, -1, 4);
             this.kryptonTextBox1.TabIndex = 7;
-            this.kryptonTextBox1.Text = "البحث عن طالب";
+            this.kryptonTextBox1.TextChanged += new System.EventHandler(this.kryptonTextBox1_TextChanged);
             // 
             // kryptonComboBoxType
             // 
@@ -322,30 +277,77 @@
             this.kryptonComboBoxStage.Text = "الدراسة";
             this.kryptonComboBoxStage.TextChanged += new System.EventHandler(this.kryptonComboBoxStage_TextChanged);
             // 
-            // kryptonComboBoxGro
+            // panel5
             // 
-            this.kryptonComboBoxGro.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonGallery;
-            this.kryptonComboBoxGro.DropDownWidth = 119;
-            this.kryptonComboBoxGro.Location = new System.Drawing.Point(134, 42);
-            this.kryptonComboBoxGro.Name = "kryptonComboBoxGro";
-            this.kryptonComboBoxGro.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonComboBoxGro.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.kryptonComboBoxGro.Size = new System.Drawing.Size(126, 30);
-            this.kryptonComboBoxGro.StateActive.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
-            this.kryptonComboBoxGro.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonComboBoxGro.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonComboBoxGro.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.panel5.Controls.Add(this.name_student);
+            this.panel5.Controls.Add(this.pictureBox4);
+            this.panel5.Controls.Add(this.kryptonButton2);
+            this.panel5.Controls.Add(this.kryptonButton1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(490, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(504, 89);
+            this.panel5.TabIndex = 15;
+            // 
+            // name_student
+            // 
+            this.name_student.AutoSize = true;
+            this.name_student.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_student.Location = new System.Drawing.Point(432, 60);
+            this.name_student.Margin = new System.Windows.Forms.Padding(70, 10, 60, 20);
+            this.name_student.Name = "name_student";
+            this.name_student.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.name_student.Size = new System.Drawing.Size(52, 22);
+            this.name_student.TabIndex = 17;
+            this.name_student.Text = "تحديث";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox4.Image = global::SSA_2.Properties.Resources._4158274081579697363_128;
+            this.pictureBox4.Location = new System.Drawing.Point(432, 14);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(500, 3, 0, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(49, 40);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
+            // kryptonButton2
+            // 
+            this.kryptonButton2.Location = new System.Drawing.Point(86, 18);
+            this.kryptonButton2.Name = "kryptonButton2";
+            this.kryptonButton2.Size = new System.Drawing.Size(140, 40);
+            this.kryptonButton2.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(119)))), ((int)(((byte)(219)))));
+            this.kryptonButton2.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(119)))), ((int)(((byte)(219)))));
+            this.kryptonButton2.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBoxGro.StateCommon.ComboBox.Border.Rounding = 3;
-            this.kryptonComboBoxGro.StateCommon.ComboBox.Border.Width = 1;
-            this.kryptonComboBoxGro.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Tajawal", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonComboBoxGro.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
-            this.kryptonComboBoxGro.StateCommon.DropBack.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.kryptonComboBoxGro.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
-            this.kryptonComboBoxGro.TabIndex = 16;
-            this.kryptonComboBoxGro.Text = "المادة";
-            this.kryptonComboBoxGro.TextChanged += new System.EventHandler(this.kryptonComboBoxGro_TextChanged);
+            this.kryptonButton2.StateCommon.Border.Rounding = 20;
+            this.kryptonButton2.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-5);
+            this.kryptonButton2.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton2.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Tajawal", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton2.TabIndex = 15;
+            this.kryptonButton2.Values.Text = "شروط الحالة";
+            // 
+            // kryptonButton1
+            // 
+            this.kryptonButton1.Location = new System.Drawing.Point(248, 19);
+            this.kryptonButton1.Name = "kryptonButton1";
+            this.kryptonButton1.Size = new System.Drawing.Size(131, 40);
+            this.kryptonButton1.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(119)))), ((int)(((byte)(219)))));
+            this.kryptonButton1.StateCommon.Back.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(119)))), ((int)(((byte)(219)))));
+            this.kryptonButton1.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonButton1.StateCommon.Border.Rounding = 20;
+            this.kryptonButton1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(-5);
+            this.kryptonButton1.StateCommon.Content.ShortText.Color1 = System.Drawing.Color.White;
+            this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Tajawal", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonButton1.TabIndex = 13;
+            this.kryptonButton1.Values.Text = "تصدير اكسل";
+            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // reports
             // 
@@ -358,17 +360,17 @@
             this.Load += new System.EventHandler(this.reports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
             this.panel7.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxGro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxDiv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxLes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxStage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxGro)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
