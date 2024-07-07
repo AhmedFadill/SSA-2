@@ -161,7 +161,6 @@
             this.kryptonComboBoxType.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxType.TabIndex = 15;
             this.kryptonComboBoxType.Text = "الشعبة";
-            this.kryptonComboBoxType.TextChanged += new System.EventHandler(this.kryptonComboBoxType_TextChanged);
             // 
             // kryptonComboBoxStage
             // 
@@ -186,7 +185,6 @@
             this.kryptonComboBoxStage.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxStage.TabIndex = 14;
             this.kryptonComboBoxStage.Text = "الشعبة";
-            this.kryptonComboBoxStage.TextChanged += new System.EventHandler(this.kryptonComboBoxStage_TextChanged);
             // 
             // panel1
             // 
@@ -274,7 +272,6 @@
             this.kryptonComboBoxLes.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxLes.TabIndex = 19;
             this.kryptonComboBoxLes.Text = "الشعبة";
-            this.kryptonComboBoxLes.TextChanged += new System.EventHandler(this.kryptonComboBoxLes_TextChanged);
             // 
             // kryptonComboBoxDate
             // 
@@ -299,7 +296,6 @@
             this.kryptonComboBoxDate.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxDate.TabIndex = 18;
             this.kryptonComboBoxDate.Text = "الشعبة";
-            this.kryptonComboBoxDate.TextChanged += new System.EventHandler(this.kryptonComboBoxDate_TextChanged);
             // 
             // kryptonComboBoxDiv
             // 
@@ -324,7 +320,6 @@
             this.kryptonComboBoxDiv.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxDiv.TabIndex = 17;
             this.kryptonComboBoxDiv.Text = "الشعبة";
-            this.kryptonComboBoxDiv.TextChanged += new System.EventHandler(this.kryptonComboBoxDiv_TextChanged);
             // 
             // kryptonComboBoxGro
             // 
@@ -349,7 +344,6 @@
             this.kryptonComboBoxGro.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxGro.TabIndex = 16;
             this.kryptonComboBoxGro.Text = "الشعبة";
-            this.kryptonComboBoxGro.TextChanged += new System.EventHandler(this.kryptonComboBoxGro_TextChanged);
             // 
             // pictureBox3
             // 
@@ -510,7 +504,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(73, 74);
             this.panel4.TabIndex = 18;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // Show
             // 
@@ -520,7 +513,6 @@
             this.Controls.Add(this.panel7);
             this.Name = "Show";
             this.Size = new System.Drawing.Size(994, 673);
-            this.Load += new System.EventHandler(this.Show_Load);
             ((System.ComponentModel.ISupportInitialize)(this.table_show)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);

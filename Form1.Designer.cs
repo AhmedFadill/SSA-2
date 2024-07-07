@@ -202,7 +202,6 @@
             this.kryptonPanel1.StateCommon.Color2 = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(119)))), ((int)(((byte)(219)))));
             this.kryptonPanel1.StateCommon.ColorStyle = ComponentFactory.Krypton.Toolkit.PaletteColorStyle.Linear;
             this.kryptonPanel1.TabIndex = 1;
-            this.kryptonPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.kryptonPanel1_Paint);
             // 
             // tableLayoutPanel1
             // 
@@ -311,7 +310,6 @@
             this.table_mainscreen.StateCommon.HeaderColumn.Content.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.table_mainscreen.StateCommon.HeaderColumn.Content.Padding = new System.Windows.Forms.Padding(5, 10, 5, 15);
             this.table_mainscreen.TabIndex = 3;
-            this.table_mainscreen.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.kryptonDataGridView1_CellContentClick);
             // 
             // filteer_mainscreen
             // 
@@ -382,7 +380,6 @@
             this.kryptonDateTimePicker1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(5);
             this.kryptonDateTimePicker1.TabIndex = 14;
             this.kryptonDateTimePicker1.ValueNullable = new System.DateTime(2024, 5, 2, 0, 0, 0, 0);
-            this.kryptonDateTimePicker1.ValueChanged += new System.EventHandler(this.kryptonDateTimePicker1_ValueChanged);
             // 
             // kryptonButton1
             // 
@@ -400,7 +397,6 @@
             this.kryptonButton1.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Tajawal", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonButton1.TabIndex = 13;
             this.kryptonButton1.Values.Text = "حفظ";
-            this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
             // panel8
             // 
@@ -440,7 +436,6 @@
             this.kryptonComboBoxLes.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxLes.TabIndex = 14;
             this.kryptonComboBoxLes.Text = "المادة";
-            this.kryptonComboBoxLes.TextChanged += new System.EventHandler(this.kryptonComboBoxLes_TextChanged);
             // 
             // pictureBox10
             // 
@@ -475,7 +470,6 @@
             this.kryptonComboBoxDiv.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxDiv.TabIndex = 10;
             this.kryptonComboBoxDiv.Text = "الشعبة";
-            this.kryptonComboBoxDiv.TextChanged += new System.EventHandler(this.kryptonComboBoxDiv_TextChanged);
             // 
             // kryptonTextBox1
             // 
@@ -492,7 +486,6 @@
             this.kryptonTextBox1.StateCommon.Content.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kryptonTextBox1.StateCommon.Content.Padding = new System.Windows.Forms.Padding(40, 4, -1, 4);
             this.kryptonTextBox1.TabIndex = 7;
-            this.kryptonTextBox1.TextChanged += new System.EventHandler(this.kryptonTextBox1_TextChanged);
             // 
             // kryptonComboBoxStage
             // 
@@ -517,7 +510,6 @@
             this.kryptonComboBoxStage.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxStage.TabIndex = 8;
             this.kryptonComboBoxStage.Text = "المرحلة";
-            this.kryptonComboBoxStage.TextChanged += new System.EventHandler(this.kryptonComboBoxStage_TextChanged);
             // 
             // kryptonComboBoxType
             // 
@@ -542,7 +534,6 @@
             this.kryptonComboBoxType.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxType.TabIndex = 9;
             this.kryptonComboBoxType.Text = "الدراسة";
-            this.kryptonComboBoxType.TextChanged += new System.EventHandler(this.kryptonComboBoxType_TextChanged);
             // 
             // kryptonComboBoxGro
             // 
@@ -567,7 +558,6 @@
             this.kryptonComboBoxGro.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxGro.TabIndex = 11;
             this.kryptonComboBoxGro.Text = "الكروب";
-            this.kryptonComboBoxGro.TextChanged += new System.EventHandler(this.kryptonComboBoxGro_TextChanged);
             // 
             // tableLayoutPanel2
             // 
@@ -599,7 +589,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(279, 636);
             this.panel3.TabIndex = 3;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panelShowReport
             // 

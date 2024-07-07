@@ -148,7 +148,6 @@
             this.kryptonComboBoxGro.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxGro.TabIndex = 16;
             this.kryptonComboBoxGro.Text = "المادة";
-            this.kryptonComboBoxGro.TextChanged += new System.EventHandler(this.kryptonComboBoxGro_TextChanged);
             // 
             // kryptonComboBoxDiv
             // 
@@ -173,7 +172,6 @@
             this.kryptonComboBoxDiv.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxDiv.TabIndex = 15;
             this.kryptonComboBoxDiv.Text = "المادة";
-            this.kryptonComboBoxDiv.TextChanged += new System.EventHandler(this.kryptonComboBoxDiv_TextChanged);
             // 
             // kryptonComboBoxLes
             // 
@@ -250,7 +248,6 @@
             this.kryptonComboBoxType.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxType.TabIndex = 8;
             this.kryptonComboBoxType.Text = "المرحلة";
-            this.kryptonComboBoxType.TextChanged += new System.EventHandler(this.kryptonComboBoxType_TextChanged);
             // 
             // kryptonComboBoxStage
             // 
@@ -275,7 +272,6 @@
             this.kryptonComboBoxStage.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxStage.TabIndex = 9;
             this.kryptonComboBoxStage.Text = "الدراسة";
-            this.kryptonComboBoxStage.TextChanged += new System.EventHandler(this.kryptonComboBoxStage_TextChanged);
             // 
             // panel5
             // 
@@ -312,7 +308,6 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 16;
             this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // kryptonButton2
             // 
@@ -357,7 +352,6 @@
             this.Controls.Add(this.panel7);
             this.Name = "reports";
             this.Size = new System.Drawing.Size(994, 673);
-            this.Load += new System.EventHandler(this.reports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
