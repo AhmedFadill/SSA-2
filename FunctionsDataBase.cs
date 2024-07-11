@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SSA_2
 {
@@ -24,5 +25,22 @@ namespace SSA_2
             string query = $"UPDATE {table} SET {values} WHERE {condition} ";
             return MajorDataBase.execute_query(query);
         }
+        internal static bool delete_element(string table, string condition)
+        {
+            string query = $"DELETE FROM {table} WHERE {condition} ";
+            return MajorDataBase.execute_query(query);
+        }
+        internal static List<KeyValuePair<string,string>> view(string table, string condition , string column )
+        {
+            List < KeyValuePair<string, string>> t= new List<KeyValuePair<string, string>>();
+            foreach (DataRow row in MajorDataBase.get_data($"SELECT DISTINCT {column} FROM {table} WHERE {condition} ").Rows) 
+            {
+                
+                t.Add(new KeyValuePair<string, string>(row[0].ToString(), row[1].ToString()));
+            }
+            return t;
+        }
+
+        
     }
 }

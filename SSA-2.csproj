@@ -189,6 +189,7 @@
     <Compile Include="control.Designer.cs">
       <DependentUpon>control.cs</DependentUpon>
     </Compile>
+    <Compile Include="controller.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>

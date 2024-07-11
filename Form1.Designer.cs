@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -40,9 +40,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.reports1 = new SSA_2.reports();
-            this.control1 = new SSA_2.control();
-            this.show1 = new SSA_2.Show();
             this.table_mainscreen = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.filteer_mainscreen = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -51,7 +48,7 @@
             this.kryptonDateTimePicker1 = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.kryptonComboBoxLes = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.kryptonComboBoxLec = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.kryptonComboBoxDiv = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -79,6 +76,9 @@
             this.cbocamera = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.name_student = new System.Windows.Forms.Label();
             this.camera_barcode = new System.Windows.Forms.PictureBox();
+            this.reports1 = new SSA_2.reports();
+            this.control1 = new SSA_2.control();
+            this.show1 = new SSA_2.Show();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -94,7 +94,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.camera_on)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.camera_off)).BeginInit();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxLes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxLec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxDiv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxStage)).BeginInit();
@@ -208,7 +208,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.8176615F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 99.18233F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -238,37 +238,10 @@
             this.panel4.Controls.Add(this.table_mainscreen);
             this.panel4.Controls.Add(this.filteer_mainscreen);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(11, 11);
+            this.panel4.Location = new System.Drawing.Point(10, 11);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(968, 639);
+            this.panel4.Size = new System.Drawing.Size(953, 639);
             this.panel4.TabIndex = 1;
-            // 
-            // reports1
-            // 
-            this.reports1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reports1.Location = new System.Drawing.Point(0, 85);
-            this.reports1.Name = "reports1";
-            this.reports1.Size = new System.Drawing.Size(968, 554);
-            this.reports1.TabIndex = 6;
-            this.reports1.Visible = false;
-            // 
-            // control1
-            // 
-            this.control1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.control1.Location = new System.Drawing.Point(0, 85);
-            this.control1.Name = "control1";
-            this.control1.Size = new System.Drawing.Size(968, 554);
-            this.control1.TabIndex = 5;
-            this.control1.Visible = false;
-            // 
-            // show1
-            // 
-            this.show1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.show1.Location = new System.Drawing.Point(0, 85);
-            this.show1.Name = "show1";
-            this.show1.Size = new System.Drawing.Size(968, 554);
-            this.show1.TabIndex = 4;
-            this.show1.Visible = false;
             // 
             // table_mainscreen
             // 
@@ -286,12 +259,12 @@
             this.table_mainscreen.Name = "table_mainscreen";
             this.table_mainscreen.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.table_mainscreen.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.table_mainscreen.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.table_mainscreen.Size = new System.Drawing.Size(968, 554);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.table_mainscreen.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.table_mainscreen.Size = new System.Drawing.Size(953, 554);
             this.table_mainscreen.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.table_mainscreen.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.table_mainscreen.StateCommon.DataCell.Back.Color1 = System.Drawing.Color.White;
@@ -319,7 +292,7 @@
             this.filteer_mainscreen.Dock = System.Windows.Forms.DockStyle.Top;
             this.filteer_mainscreen.Location = new System.Drawing.Point(0, 0);
             this.filteer_mainscreen.Name = "filteer_mainscreen";
-            this.filteer_mainscreen.Size = new System.Drawing.Size(968, 85);
+            this.filteer_mainscreen.Size = new System.Drawing.Size(953, 85);
             this.filteer_mainscreen.TabIndex = 2;
             // 
             // panel5
@@ -329,7 +302,7 @@
             this.panel5.Controls.Add(this.kryptonDateTimePicker1);
             this.panel5.Controls.Add(this.kryptonButton1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(550, 0);
+            this.panel5.Location = new System.Drawing.Point(535, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(418, 85);
             this.panel5.TabIndex = 15;
@@ -363,6 +336,7 @@
             // 
             // kryptonDateTimePicker1
             // 
+            this.kryptonDateTimePicker1.CalendarTodayDate = new System.DateTime(2024, 7, 8, 0, 0, 0, 0);
             this.kryptonDateTimePicker1.CustomFormat = "yy-MM-dd  dddd";
             this.kryptonDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.kryptonDateTimePicker1.Location = new System.Drawing.Point(140, 21);
@@ -400,7 +374,7 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.kryptonComboBoxLes);
+            this.panel8.Controls.Add(this.kryptonComboBoxLec);
             this.panel8.Controls.Add(this.pictureBox10);
             this.panel8.Controls.Add(this.kryptonComboBoxDiv);
             this.panel8.Controls.Add(this.kryptonTextBox1);
@@ -413,29 +387,29 @@
             this.panel8.Size = new System.Drawing.Size(586, 85);
             this.panel8.TabIndex = 12;
             // 
-            // kryptonComboBoxLes
+            // kryptonComboBoxLec
             // 
-            this.kryptonComboBoxLes.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonGallery;
-            this.kryptonComboBoxLes.DropDownWidth = 119;
-            this.kryptonComboBoxLes.Location = new System.Drawing.Point(233, 24);
-            this.kryptonComboBoxLes.Name = "kryptonComboBoxLes";
-            this.kryptonComboBoxLes.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
-            this.kryptonComboBoxLes.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.kryptonComboBoxLes.Size = new System.Drawing.Size(126, 30);
-            this.kryptonComboBoxLes.StateActive.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
-            this.kryptonComboBoxLes.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
-            this.kryptonComboBoxLes.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Black;
-            this.kryptonComboBoxLes.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            this.kryptonComboBoxLec.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonGallery;
+            this.kryptonComboBoxLec.DropDownWidth = 119;
+            this.kryptonComboBoxLec.Location = new System.Drawing.Point(233, 24);
+            this.kryptonComboBoxLec.Name = "kryptonComboBoxLec";
+            this.kryptonComboBoxLec.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.kryptonComboBoxLec.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.kryptonComboBoxLec.Size = new System.Drawing.Size(126, 30);
+            this.kryptonComboBoxLec.StateActive.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
+            this.kryptonComboBoxLec.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonComboBoxLec.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonComboBoxLec.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
-            this.kryptonComboBoxLes.StateCommon.ComboBox.Border.Rounding = 3;
-            this.kryptonComboBoxLes.StateCommon.ComboBox.Border.Width = 1;
-            this.kryptonComboBoxLes.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Tajawal", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.kryptonComboBoxLes.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
-            this.kryptonComboBoxLes.StateCommon.DropBack.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.kryptonComboBoxLes.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
-            this.kryptonComboBoxLes.TabIndex = 14;
-            this.kryptonComboBoxLes.Text = "المادة";
+            this.kryptonComboBoxLec.StateCommon.ComboBox.Border.Rounding = 3;
+            this.kryptonComboBoxLec.StateCommon.ComboBox.Border.Width = 1;
+            this.kryptonComboBoxLec.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Tajawal", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonComboBoxLec.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
+            this.kryptonComboBoxLec.StateCommon.DropBack.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kryptonComboBoxLec.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
+            this.kryptonComboBoxLec.TabIndex = 14;
+            this.kryptonComboBoxLec.Text = "المادة";
             // 
             // pictureBox10
             // 
@@ -470,6 +444,7 @@
             this.kryptonComboBoxDiv.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxDiv.TabIndex = 10;
             this.kryptonComboBoxDiv.Text = "الشعبة";
+            this.kryptonComboBoxDiv.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxDiv_SelectedIndexChanged);
             // 
             // kryptonTextBox1
             // 
@@ -510,6 +485,7 @@
             this.kryptonComboBoxStage.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxStage.TabIndex = 8;
             this.kryptonComboBoxStage.Text = "المرحلة";
+            this.kryptonComboBoxStage.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxStage_SelectedIndexChanged);
             // 
             // kryptonComboBoxType
             // 
@@ -534,6 +510,7 @@
             this.kryptonComboBoxType.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxType.TabIndex = 9;
             this.kryptonComboBoxType.Text = "الدراسة";
+            this.kryptonComboBoxType.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxType_SelectedIndexChanged);
             // 
             // kryptonComboBoxGro
             // 
@@ -558,6 +535,7 @@
             this.kryptonComboBoxGro.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxGro.TabIndex = 11;
             this.kryptonComboBoxGro.Text = "الكروب";
+            this.kryptonComboBoxGro.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxGro_SelectedIndexChanged);
             // 
             // tableLayoutPanel2
             // 
@@ -822,6 +800,33 @@
             this.camera_barcode.TabStop = false;
             this.camera_barcode.Visible = false;
             // 
+            // reports1
+            // 
+            this.reports1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reports1.Location = new System.Drawing.Point(0, 85);
+            this.reports1.Name = "reports1";
+            this.reports1.Size = new System.Drawing.Size(953, 554);
+            this.reports1.TabIndex = 6;
+            this.reports1.Visible = false;
+            // 
+            // control1
+            // 
+            this.control1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.control1.Location = new System.Drawing.Point(0, 85);
+            this.control1.Name = "control1";
+            this.control1.Size = new System.Drawing.Size(953, 554);
+            this.control1.TabIndex = 5;
+            this.control1.Visible = false;
+            // 
+            // show1
+            // 
+            this.show1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.show1.Location = new System.Drawing.Point(0, 85);
+            this.show1.Name = "show1";
+            this.show1.Size = new System.Drawing.Size(953, 554);
+            this.show1.TabIndex = 4;
+            this.show1.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -852,7 +857,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.camera_off)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxLes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxLec)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxDiv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxStage)).EndInit();
@@ -928,7 +933,7 @@
         private System.Windows.Forms.PictureBox camera_barcode;
         private System.Windows.Forms.PictureBox camera_on;
         private System.Windows.Forms.Label name_student;
-        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBoxLes;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBoxLec;
         private Show show1;
         private control control1;
         private reports reports1;

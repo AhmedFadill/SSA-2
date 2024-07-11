@@ -19,13 +19,12 @@ namespace SSA_2
 
         private void Test_Load(object sender, EventArgs e)
         {
-           dataGridView1.DataSource= FunctionsDataBase.view_table("stages");
+           dataGridView1.DataSource= FunctionsDataBase.view_table("cd");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text)) { }
-            if (FunctionsDataBase.add_element("stages", "name,type", $"'{textBox1.Text}',{textBox2.Text}"))
+            if (FunctionsDataBase.add_element("divisions", "name,type", $"'{textBox1.Text}',{textBox2.Text}"))
             {
                 MessageBox.Show("added done");
                 Test_Load(null,EventArgs.Empty);
@@ -39,7 +38,8 @@ namespace SSA_2
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (FunctionsDataBase.updata_element("stages", $"name='{textBox1.Text}'", "id="+textBox2.Text))
+            if (FunctionsDataBase.updata_element("stages", $"name='{textBox1.Text}',type={textBox2.Text}"
+                , "id="+textBox3.Text))
             {
                 MessageBox.Show("added done");
                 Test_Load(null, EventArgs.Empty);
@@ -48,6 +48,31 @@ namespace SSA_2
             {
                 MessageBox.Show("can't add");
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = FunctionsDataBase.view_table(textBox5.Text);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label1.Text = comboBox1.SelectedValue.ToString();
+        }
+
+       
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            label2.Text = comboBox2.SelectedValue.ToString();
+        }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string value=comboBox3.SelectedValue.ToString();
+            label3.Text = value;
+            dataGridView1.DataSource=FunctionsDataBase.view_table("students",$" group_id={value}");
+
         }
     }
 }

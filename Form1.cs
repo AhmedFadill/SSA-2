@@ -164,8 +164,31 @@ namespace SSA_2
         
         private void Form1_Load(object sender, EventArgs e)
         {
+           
             kryptonDateTimePicker1.Value = DateTime.Now;
+            controller.setStage(ref kryptonComboBoxStage);
+
         }
 
+        private void kryptonComboBoxStage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            controller.setType(ref kryptonComboBoxType, kryptonComboBoxStage.SelectedValue.ToString());
+        }
+
+        private void kryptonComboBoxType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            controller.setDivision(ref kryptonComboBoxDiv, kryptonComboBoxType.SelectedValue.ToString());
+            controller.setLecture(ref kryptonComboBoxLec, kryptonComboBoxType.SelectedValue.ToString());
+        }
+
+        private void kryptonComboBoxDiv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            controller.setGroup(ref kryptonComboBoxGro, kryptonComboBoxDiv.SelectedValue.ToString());
+        }
+
+        private void kryptonComboBoxGro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            table_mainscreen.DataSource= FunctionsDataBase.view_table("students", $"group_id={kryptonComboBoxGro.SelectedValue}","name,card_num,note");
+        }
     }
 }
