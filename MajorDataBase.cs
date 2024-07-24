@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SQLite;
 
@@ -11,7 +7,17 @@ namespace SSA_2
 {
     static internal class MajorDataBase
     {
-        private static string connection_stirng = "Data Source=DB.db";
+        private static string DB_name = "DB.db";
+        private static string connection_stirng = $"Data Source={DB_name}";
+        internal static SQLiteConnection Connection()
+        {
+            try {
+                return new SQLiteConnection("Data Source=DB.db");
+            } catch {
+                MessageBox.Show("Error to connect to DB");
+                return null;
+            }
+        }
         internal static DataTable get_data(string query)
         {
             DataTable dt = new DataTable();
@@ -48,9 +54,9 @@ namespace SSA_2
                 }
                 
             }
-            catch (Exception ex)
+            catch (SQLiteException ex)
             {
-                MessageBox.Show($"this error is {ex}", "wow", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"this error is {ex.Message}", "Worng in Query", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;

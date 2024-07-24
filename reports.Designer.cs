@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -74,11 +74,11 @@
             this.kryptonDataGridView1.ReadOnly = true;
             this.kryptonDataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.kryptonDataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.kryptonDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.kryptonDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.kryptonDataGridView1.Size = new System.Drawing.Size(994, 584);
             this.kryptonDataGridView1.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.kryptonDataGridView1.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
@@ -148,6 +148,7 @@
             this.kryptonComboBoxGro.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxGro.TabIndex = 16;
             this.kryptonComboBoxGro.Text = "المادة";
+            this.kryptonComboBoxGro.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxGro_SelectedIndexChanged);
             // 
             // kryptonComboBoxDiv
             // 
@@ -172,6 +173,7 @@
             this.kryptonComboBoxDiv.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxDiv.TabIndex = 15;
             this.kryptonComboBoxDiv.Text = "المادة";
+            this.kryptonComboBoxDiv.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxDiv_SelectedIndexChanged);
             // 
             // kryptonComboBoxLes
             // 
@@ -248,6 +250,7 @@
             this.kryptonComboBoxType.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxType.TabIndex = 8;
             this.kryptonComboBoxType.Text = "المرحلة";
+            this.kryptonComboBoxType.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxType_SelectedIndexChanged);
             // 
             // kryptonComboBoxStage
             // 
@@ -272,6 +275,7 @@
             this.kryptonComboBoxStage.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxStage.TabIndex = 9;
             this.kryptonComboBoxStage.Text = "الدراسة";
+            this.kryptonComboBoxStage.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxStage_SelectedIndexChanged);
             // 
             // panel5
             // 
@@ -352,6 +356,7 @@
             this.Controls.Add(this.panel7);
             this.Name = "reports";
             this.Size = new System.Drawing.Size(994, 673);
+            this.Load += new System.EventHandler(this.reports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);

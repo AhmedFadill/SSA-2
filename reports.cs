@@ -84,5 +84,34 @@ namespace SSA_2
         }
 
         
+
+        private void reports_Load(object sender, EventArgs e)
+        {
+            controller.setStage(ref kryptonComboBoxStage);
+
+        }
+        private void kryptonComboBoxStage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            controller.setType(ref kryptonComboBoxType, ref kryptonComboBoxStage);
+
+        }
+
+        private void kryptonComboBoxType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            controller.setDivision(ref kryptonComboBoxDiv, ref kryptonComboBoxType);
+            controller.setLecture(ref kryptonComboBoxLes, ref kryptonComboBoxType);
+        }
+
+        private void kryptonComboBoxDiv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            controller.setGroup(ref kryptonComboBoxGro, ref kryptonComboBoxDiv);
+        }
+
+    
+
+    private void kryptonComboBoxGro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

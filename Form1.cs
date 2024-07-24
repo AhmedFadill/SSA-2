@@ -172,18 +172,18 @@ namespace SSA_2
 
         private void kryptonComboBoxStage_SelectedIndexChanged(object sender, EventArgs e)
         {
-            controller.setType(ref kryptonComboBoxType, kryptonComboBoxStage.SelectedValue.ToString());
+            controller.setType(ref kryptonComboBoxType, ref kryptonComboBoxStage);
         }
 
         private void kryptonComboBoxType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            controller.setDivision(ref kryptonComboBoxDiv, kryptonComboBoxType.SelectedValue.ToString());
-            controller.setLecture(ref kryptonComboBoxLec, kryptonComboBoxType.SelectedValue.ToString());
+            controller.setDivision(ref kryptonComboBoxDiv, ref kryptonComboBoxType);
+            controller.setLecture(ref kryptonComboBoxLec, ref kryptonComboBoxType);
         }
 
         private void kryptonComboBoxDiv_SelectedIndexChanged(object sender, EventArgs e)
         {
-            controller.setGroup(ref kryptonComboBoxGro, kryptonComboBoxDiv.SelectedValue.ToString());
+            controller.setGroup(ref kryptonComboBoxGro, ref kryptonComboBoxDiv);
         }
 
         private void kryptonComboBoxGro_SelectedIndexChanged(object sender, EventArgs e)

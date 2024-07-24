@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.kryptonDataGridView1 = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.kryptonComboBoxStage = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.kryptonTextBox1 = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.kryptonComboBoxGro = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
@@ -42,18 +43,17 @@
             this.kryptonButton3 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.name_student = new System.Windows.Forms.Label();
-            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxStage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxGro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxDiv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxType)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,11 +74,11 @@
             this.kryptonDataGridView1.ReadOnly = true;
             this.kryptonDataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.kryptonDataGridView1.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.kryptonDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.kryptonDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.kryptonDataGridView1.Size = new System.Drawing.Size(994, 563);
             this.kryptonDataGridView1.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.kryptonDataGridView1.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
@@ -124,6 +124,16 @@
             this.panel8.Size = new System.Drawing.Size(616, 110);
             this.panel8.TabIndex = 12;
             // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = global::SSA_2.Properties.Resources.icon_search;
+            this.pictureBox10.Location = new System.Drawing.Point(370, 29);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(32, 21);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 13;
+            this.pictureBox10.TabStop = false;
+            // 
             // kryptonComboBoxStage
             // 
             this.kryptonComboBoxStage.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonGallery;
@@ -147,6 +157,7 @@
             this.kryptonComboBoxStage.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxStage.TabIndex = 10;
             this.kryptonComboBoxStage.Text = "الشعبة";
+            this.kryptonComboBoxStage.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxStage_SelectedIndexChanged);
             // 
             // kryptonTextBox1
             // 
@@ -188,6 +199,7 @@
             this.kryptonComboBoxGro.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxGro.TabIndex = 8;
             this.kryptonComboBoxGro.Text = "المرحلة";
+            this.kryptonComboBoxGro.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxGro_SelectedIndexChanged);
             // 
             // kryptonComboBoxDiv
             // 
@@ -212,6 +224,7 @@
             this.kryptonComboBoxDiv.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxDiv.TabIndex = 9;
             this.kryptonComboBoxDiv.Text = "الدراسة";
+            this.kryptonComboBoxDiv.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxDiv_SelectedIndexChanged);
             // 
             // kryptonComboBoxType
             // 
@@ -236,6 +249,7 @@
             this.kryptonComboBoxType.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxType.TabIndex = 11;
             this.kryptonComboBoxType.Text = "الكروب";
+            this.kryptonComboBoxType.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxType_SelectedIndexChanged);
             // 
             // panel5
             // 
@@ -314,6 +328,18 @@
             this.name_student.TabIndex = 17;
             this.name_student.Text = "تحديث";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox4.Image = global::SSA_2.Properties.Resources._4158274081579697363_128;
+            this.pictureBox4.Location = new System.Drawing.Point(466, 17);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(500, 3, 0, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(49, 40);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 16;
+            this.pictureBox4.TabStop = false;
+            // 
             // kryptonButton1
             // 
             this.kryptonButton1.Location = new System.Drawing.Point(300, 50);
@@ -332,28 +358,6 @@
             this.kryptonButton1.Values.Text = "ادخال من اكسل";
             this.kryptonButton1.Click += new System.EventHandler(this.kryptonButton1_Click);
             // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = global::SSA_2.Properties.Resources.icon_search;
-            this.pictureBox10.Location = new System.Drawing.Point(370, 29);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(32, 21);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 13;
-            this.pictureBox10.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox4.Image = global::SSA_2.Properties.Resources._4158274081579697363_128;
-            this.pictureBox4.Location = new System.Drawing.Point(466, 17);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(500, 3, 0, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(49, 40);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 16;
-            this.pictureBox4.TabStop = false;
-            // 
             // control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -362,17 +366,18 @@
             this.Controls.Add(this.panel7);
             this.Name = "control";
             this.Size = new System.Drawing.Size(994, 673);
+            this.Load += new System.EventHandler(this.control_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kryptonDataGridView1)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxStage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxGro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxDiv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxType)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 

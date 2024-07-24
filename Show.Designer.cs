@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.table_show = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -89,11 +89,11 @@
             this.table_show.Name = "table_show";
             this.table_show.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.table_show.RowHeadersVisible = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.table_show.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.table_show.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.table_show.Size = new System.Drawing.Size(994, 578);
             this.table_show.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.table_show.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
@@ -161,6 +161,7 @@
             this.kryptonComboBoxType.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxType.TabIndex = 15;
             this.kryptonComboBoxType.Text = "الشعبة";
+            this.kryptonComboBoxType.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxType_SelectedIndexChanged);
             // 
             // kryptonComboBoxStage
             // 
@@ -185,6 +186,7 @@
             this.kryptonComboBoxStage.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxStage.TabIndex = 14;
             this.kryptonComboBoxStage.Text = "الشعبة";
+            this.kryptonComboBoxStage.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxStage_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -320,6 +322,7 @@
             this.kryptonComboBoxDiv.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxDiv.TabIndex = 17;
             this.kryptonComboBoxDiv.Text = "الشعبة";
+            this.kryptonComboBoxDiv.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxDiv_SelectedIndexChanged);
             // 
             // kryptonComboBoxGro
             // 
@@ -344,6 +347,7 @@
             this.kryptonComboBoxGro.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxGro.TabIndex = 16;
             this.kryptonComboBoxGro.Text = "الشعبة";
+            this.kryptonComboBoxGro.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxGro_SelectedIndexChanged);
             // 
             // pictureBox3
             // 
@@ -513,6 +517,7 @@
             this.Controls.Add(this.panel7);
             this.Name = "Show";
             this.Size = new System.Drawing.Size(994, 673);
+            this.Load += new System.EventHandler(this.Show_Load);
             ((System.ComponentModel.ISupportInitialize)(this.table_show)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);

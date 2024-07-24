@@ -19,12 +19,13 @@ namespace SSA_2
 
         private void Test_Load(object sender, EventArgs e)
         {
-           dataGridView1.DataSource= FunctionsDataBase.view_table("cd");
+           dataGridView1.DataSource= FunctionsDataBase.view_table("students");
+            controller.setStage(ref kryptonComboBox4);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
-            if (FunctionsDataBase.add_element("divisions", "name,type", $"'{textBox1.Text}',{textBox2.Text}"))
+            if (controller.editStudent(textBox1.Text, kryptonComboBox1.SelectedValue.ToString(), numericUpDown1.Value.ToString(),textBox2.Text,textBox3.Text))
             {
                 MessageBox.Show("added done");
                 Test_Load(null,EventArgs.Empty);
@@ -36,42 +37,30 @@ namespace SSA_2
 
         }
 
+        private void kryptonComboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            controller.setType(ref kryptonComboBox3, ref kryptonComboBox4);
+        }
+
+        private void kryptonComboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            controller.setDivision(ref kryptonComboBox2, ref kryptonComboBox3);
+        }
+
+        private void kryptonComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            controller.setGroup(ref kryptonComboBox1,ref kryptonComboBox2);
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
-            if (FunctionsDataBase.updata_element("stages", $"name='{textBox1.Text}',type={textBox2.Text}"
-                , "id="+textBox3.Text))
-            {
-                MessageBox.Show("added done");
-                Test_Load(null, EventArgs.Empty);
-            }
+            if(controller.deleteStudent(textBox3.Text))
+                MessageBox.Show("Delete Successfully");
             else
             {
-                MessageBox.Show("can't add");
+                MessageBox.Show("Delete faild");
             }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            dataGridView1.DataSource = FunctionsDataBase.view_table(textBox5.Text);
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            label1.Text = comboBox1.SelectedValue.ToString();
-        }
-
-       
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            label2.Text = comboBox2.SelectedValue.ToString();
-        }
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string value=comboBox3.SelectedValue.ToString();
-            label3.Text = value;
-            dataGridView1.DataSource=FunctionsDataBase.view_table("students",$" group_id={value}");
+            Test_Load(null, EventArgs.Empty);
 
         }
     }

@@ -63,38 +63,44 @@ namespace SSA_2
                             return;
                         }
                     }
-                    try
-                    {
-                        int NameIndex = dt.Columns.IndexOf("اسم الطالب"),
-                            CardIndex = dt.Columns.IndexOf("رقم البطاقة"),
-                            Note = dt.Columns.IndexOf("الملاحظة");
-                        if (NameIndex == -1) { MessageBox.Show("! حقل اسم الطالب غير موجود يرجى اضافته الى الاكسل", "حقل اسم الطالب غير موجود", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                        if (CardIndex == -1) { MessageBox.Show("! حقل رقم البطاقة غير موجود يرجى اضافته الى الاكسل", "حقل رقم البطاقة غير موجود", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                        if (Note == -1) { MessageBox.Show("! حقل الملاحظة غير موجود يرجى اضافته الى الاكسل", "حقل الملاحظة غير موجود", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                        //if (re == DialogResult.Yes)
-                        //    DB_Functions.Execute("UPDATE [dbo].[students] SET [isDelete] = 1 where [studyInformationID] =" + id);
-                        //foreach (DataRow row in dt.Rows)
-                        //{
-                        //    if (string.IsNullOrWhiteSpace(row[NameIndex].ToString())) continue;
-                        //    if (string.IsNullOrWhiteSpace(row[CardIndex].ToString())) continue;
-                        //    DB_Functions.Execute("insert into students (Name,cardNum,Note,[studyInformationID]) values ('" + row[NameIndex].ToString() + "'," + row[CardIndex].ToString() + ",'" + row[Note].ToString() + "'," + id + ") ");
-                        //}
-                    }
-                    catch
-                    {
-                        MessageBox.Show("يوجد خطا في الملف يرجى التاكد من ان الملف يتبع القواعد الخاصة بادخال بيانات ", "خطا في الملف المدخل", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+
+                    if (!dt.Columns.Contains("الاسم")) { MessageBox.Show("! حقل الاسم غير موجود يرجى اضافته الى الاكسل", "حقل اسم الطالب غير موجود", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (!dt.Columns.Contains("الرقم")) { MessageBox.Show("! حقل الرقم غير موجود يرجى اضافته الى الاكسل", "حقل رقم البطاقة غير موجود", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                    if (!dt.Columns.Contains("الملاحظة")) { MessageBox.Show("! حقل الملاحظة غير موجود يرجى اضافته الى الاكسل", "حقل الملاحظة غير موجود", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
 
                 }
                 catch { MessageBox.Show("يرجى اغلاق الملف الاكسل"); }
-
-                //kryptonComboBoxGro_TextChanged(sender, e);
             }
         }
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
         {
             (kryptonDataGridView1.DataSource as DataTable).DefaultView.RowFilter = string.Format("[Name] like '" + kryptonTextBox1.Text + "%'");
+        }
+
+        private void kryptonComboBoxStage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            controller.setType(ref kryptonComboBoxType, ref kryptonComboBoxStage);
+        }
+
+        private void kryptonComboBoxType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            controller.setDivision(ref kryptonComboBoxDiv,ref kryptonComboBoxType);
+        }
+
+        private void kryptonComboBoxDiv_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            controller.setGroup(ref kryptonComboBoxGro, ref kryptonComboBoxDiv);
+        }
+        private void kryptonComboBoxGro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            kryptonDataGridView1.DataSource =  FunctionsDataBase.view_table("students", $"group_id={kryptonComboBoxGro.SelectedValue}", "name,card_num,note");
+
+        }
+
+        private void control_Load(object sender, EventArgs e)
+        {
+            controller.setStage(ref kryptonComboBoxStage);
         }
     }
 }
