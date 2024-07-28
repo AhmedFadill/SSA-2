@@ -31,11 +31,6 @@ namespace SSA_2
 
         private void kryptonButton1_Click(object sender, EventArgs e)
         {
-            DialogResult re = MessageBox.Show("هل تريد حذف السجل السابق ؟", "مسح السجل السابق", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign);
-
-            if (re != DialogResult.Cancel)
-            {
-                DataTable dt = new DataTable();
                 try
                 {
                     using (OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Excel Workbook|*.xlsx" })
@@ -53,9 +48,18 @@ namespace SSA_2
                                             UseHeaderRow = true
                                         }
                                     });
-                                    dt = result.Tables[0];
-                                }
+                                if (!result.Tables[0].Columns.Contains("الاسم")) { MessageBox.Show("! حقل الاسم غير موجود يرجى اضافته الى الاكسل", "حقل اسم الطالب غير موجود", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                                if (!result.Tables[0].Columns.Contains("الرقم")) { MessageBox.Show("! حقل الرقم غير موجود يرجى اضافته الى الاكسل", "حقل رقم البطاقة غير موجود", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                                if (!result.Tables[0].Columns.Contains("الملاحظة")) { MessageBox.Show("! حقل الملاحظة غير موجود يرجى اضافته الى الاكسل", "حقل الملاحظة غير موجود", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
+                                string worng = controller.addStudentExcel(result.Tables[0], kryptonComboBoxGro.SelectedValue.ToString());
+                                if (string.IsNullOrEmpty(worng))
+                                    MessageBox.Show("تم اضافة البيانات بنجاح");
+                                else
+                                    MessageBox.Show(worng);
+                                
+                                control_Load(null, null);
                             }
+                        }
                         }
                         else
                         {
@@ -64,13 +68,10 @@ namespace SSA_2
                         }
                     }
 
-                    if (!dt.Columns.Contains("الاسم")) { MessageBox.Show("! حقل الاسم غير موجود يرجى اضافته الى الاكسل", "حقل اسم الطالب غير موجود", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (!dt.Columns.Contains("الرقم")) { MessageBox.Show("! حقل الرقم غير موجود يرجى اضافته الى الاكسل", "حقل رقم البطاقة غير موجود", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-                    if (!dt.Columns.Contains("الملاحظة")) { MessageBox.Show("! حقل الملاحظة غير موجود يرجى اضافته الى الاكسل", "حقل الملاحظة غير موجود", MessageBoxButtons.OK, MessageBoxIcon.Error); return; }
-
+                    
                 }
                 catch { MessageBox.Show("يرجى اغلاق الملف الاكسل"); }
-            }
+            
         }
 
         private void kryptonTextBox1_TextChanged(object sender, EventArgs e)
@@ -101,6 +102,9 @@ namespace SSA_2
         private void control_Load(object sender, EventArgs e)
         {
             controller.setStage(ref kryptonComboBoxStage);
+            kryptonDataGridView1.Columns["Name"].HeaderText = "اسم الطالب";
+            kryptonDataGridView1.Columns["card_num"].HeaderText = "رقم البطاقة";
+            kryptonDataGridView1.Columns["note"].HeaderText = "ملاحظة";      
         }
     }
 }

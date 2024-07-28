@@ -1,4 +1,5 @@
 ﻿using ClosedXML.Excel;
+using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -14,29 +15,7 @@ namespace SSA_2
         }
 
 
-        string alarms(string cell)
-        {
-            if (int.TryParse(cell, out _))
-            {
-                int c1 = int.Parse(cell),
-                a0 = 2,
-                a1 = 3,
-                a2 = 4,
-                a3 = 5,
-                a4 = 7;
-                if (c1 >= a4)
-                    return "فصل";
-                else if (c1 >= a3)
-                    return "انذار نهائي";
-                else if (c1 >= a2)
-                    return "انذار ثاني";
-                else if (c1 >= a1)
-                    return "انذار اول";
-                else if (c1 >= a0)
-                    return "تنبيه";
-            }
-            return string.Empty;
-        }
+        
         
 
        
@@ -58,8 +37,8 @@ namespace SSA_2
             dt.PrimaryKey = null;
             dt.Columns.Remove("id");
             dt.Columns["Name"].ColumnName = "اسم الطالب";
-            dt.Columns["result"].ColumnName = "مجموع الغياب";
-            dt.Columns["state"].ColumnName = "الحالة";
+            dt.Columns["Totle"].ColumnName = "مجموع الغياب";
+            dt.Columns["Warn"].ColumnName = "الحالة";
 
             using (SaveFileDialog std = new SaveFileDialog() { Filter = "Excel|*.xlsx" })
             {
@@ -88,6 +67,11 @@ namespace SSA_2
         private void reports_Load(object sender, EventArgs e)
         {
             controller.setStage(ref kryptonComboBoxStage);
+            kryptonDataGridView1.Columns["id"].Visible = false;
+            kryptonDataGridView1.Columns["Totle"].HeaderText = "مجموع الغياب";
+            kryptonDataGridView1.Columns["Name"].HeaderText = "اسم الطالب";
+            kryptonDataGridView1.Columns["Warn"].HeaderText = "الحالة";
+
 
         }
         private void kryptonComboBoxStage_SelectedIndexChanged(object sender, EventArgs e)
@@ -107,11 +91,14 @@ namespace SSA_2
             controller.setGroup(ref kryptonComboBoxGro, ref kryptonComboBoxDiv);
         }
 
-    
-
     private void kryptonComboBoxGro_SelectedIndexChanged(object sender, EventArgs e)
         {
+            controller.setLecture(ref kryptonComboBoxLes,ref kryptonComboBoxType);
+        }
 
+        private void kryptonComboBoxLes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            kryptonDataGridView1.DataSource= controller.report(kryptonComboBoxGro.SelectedValue.ToString(),kryptonComboBoxLes.SelectedValue.ToString());
         }
     }
 }

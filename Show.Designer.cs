@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.table_show = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -89,11 +89,11 @@
             this.table_show.Name = "table_show";
             this.table_show.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.table_show.RowHeadersVisible = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.table_show.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.table_show.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.table_show.Size = new System.Drawing.Size(994, 578);
             this.table_show.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.table_show.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
@@ -274,6 +274,7 @@
             this.kryptonComboBoxLes.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxLes.TabIndex = 19;
             this.kryptonComboBoxLes.Text = "الشعبة";
+            this.kryptonComboBoxLes.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxLes_SelectedIndexChanged);
             // 
             // kryptonComboBoxDate
             // 
@@ -298,6 +299,7 @@
             this.kryptonComboBoxDate.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
             this.kryptonComboBoxDate.TabIndex = 18;
             this.kryptonComboBoxDate.Text = "الشعبة";
+            this.kryptonComboBoxDate.SelectedIndexChanged += new System.EventHandler(this.kryptonComboBoxDate_SelectedIndexChanged);
             // 
             // kryptonComboBoxDiv
             // 

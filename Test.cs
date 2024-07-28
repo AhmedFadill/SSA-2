@@ -19,21 +19,13 @@ namespace SSA_2
 
         private void Test_Load(object sender, EventArgs e)
         {
-           dataGridView1.DataSource= FunctionsDataBase.view_table("students");
+           dataGridView1.DataSource= controller.report("2","1");
             controller.setStage(ref kryptonComboBox4);
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (controller.editStudent(textBox1.Text, kryptonComboBox1.SelectedValue.ToString(), numericUpDown1.Value.ToString(),textBox2.Text,textBox3.Text))
-            {
-                MessageBox.Show("added done");
-                Test_Load(null,EventArgs.Empty);
-            }
-            else
-            {
-                MessageBox.Show("can't add");
-            }
+            dataGridView1.DataSource = controller.report(kryptonComboBox1.SelectedValue.ToString() , kryptonComboBox5.SelectedValue.ToString());
 
         }
 
@@ -45,6 +37,7 @@ namespace SSA_2
         private void kryptonComboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             controller.setDivision(ref kryptonComboBox2, ref kryptonComboBox3);
+            controller.setLecture(ref kryptonComboBox5, ref kryptonComboBox3);
         }
 
         private void kryptonComboBox2_SelectedIndexChanged(object sender, EventArgs e)

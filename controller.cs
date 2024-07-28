@@ -36,6 +36,12 @@ namespace SSA_2
             Group.ValueMember = "Value";
             Group.DataSource = FunctionsDataBase.view("CD", $"div_id={Division.SelectedValue}", "gro,group_id");
         }
+        internal static void setDate(ref KryptonComboBox Date, ref KryptonComboBox Group, ref KryptonComboBox Lecture)
+        {
+            var data = FunctionsDataBase.query_date(Group.SelectedValue.ToString(), Lecture.SelectedValue.ToString());
+            if(data.Count == 0) data = new List<string>() { "لا يوجد" };
+            Date.DataSource= data ;
+        }
 
 
         internal static bool addStudent(string name,string group_id,string card_num,string note)
@@ -185,6 +191,79 @@ namespace SSA_2
             id = id.Replace("'", "");
             return FunctionsDataBase.delete_element("groups", $"id={id}");
         }
+
+
+        internal static bool addWarn(string name, string rank)
+        {
+            name = name.Replace("'", "");
+            rank = rank.Replace("'", "");
+            return FunctionsDataBase.add_element("warning", "name,rank", $"'{name}',{rank}");
+        }
+        internal static bool editWarn(string name, string rank, string id)
+        {
+            name = name.Replace("'", "");
+            rank = rank.Replace("'", "");
+            id = id.Replace("'", "");
+            return FunctionsDataBase.updata_element("warning", $"name = '{name}' , rank = {rank} ", $"id={id}");
+        }
+        internal static bool deleteWarn(string id)
+        {
+            id = id.Replace("'", "");
+            return FunctionsDataBase.delete_element("warning", $"id={id}");
+        }
+
+
+
+
+        internal static DataTable report(string idGroup,string idLecture )
+        {
+            DataTable report = FunctionsDataBase.view_table("students",$"group_id={idGroup}","id,name");
+            DataColumn totle = new DataColumn() { 
+                DataType = typeof(string),
+                AllowDBNull=false,
+                ColumnName="Totle"
+             }, warn = new DataColumn()
+             {
+                 DataType = typeof(string),
+                 AllowDBNull = true,
+                 ColumnName = "Warn"
+             };
+            report.Columns.Add(totle);
+            report.Columns.Add(warn);
+
+            foreach (DataRow row in report.Rows)
+            {
+                row["Totle"] = FunctionsDataBase.get_single_data("attendance", $"student_id={row["id"]} and lecture_id ={idLecture} and is_present = 0","COUNT(*)",true);
+                string att =  FunctionsDataBase.warning(row["Totle"].ToString());
+                row["Warn"] = att == "No data" ? "لا يوجد" : att;
+            }
+            
+
+            foreach (string date in FunctionsDataBase.get_collection_data("info", "distinct date",$"gro_id={idGroup} and lec_id={idLecture}"))
+            {
+                DataColumn column = new DataColumn()
+                {
+                    DataType = typeof(string),
+                    AllowDBNull = true,
+                    ColumnName = date
+                };
+                report.Columns.Add(column);
+            }
+            foreach(DataRow row in report.Rows)
+            {
+                foreach (DataColumn column in report.Columns)
+                {
+                    if (column.ColumnName == "id" || column.ColumnName == "name" || column.ColumnName == "Totle" || column.ColumnName == "Warn") continue;
+                    string att = FunctionsDataBase.get_single_data("info", $"stu_id={row["id"]} and lec_id ={idLecture} and date = '{column.ColumnName}'", "P");
+                    row[column.ColumnName] =  att == "No data" ?"لا يوجد":att;
+
+                }
+            }
+            
+            return report;
+        }
+
+
 
 
     }

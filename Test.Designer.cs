@@ -39,12 +39,14 @@
             this.kryptonComboBox3 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.kryptonComboBox5 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -207,11 +209,36 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // kryptonComboBox5
+            // 
+            this.kryptonComboBox5.DropBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ButtonGallery;
+            this.kryptonComboBox5.DropDownWidth = 119;
+            this.kryptonComboBox5.Location = new System.Drawing.Point(224, 242);
+            this.kryptonComboBox5.Name = "kryptonComboBox5";
+            this.kryptonComboBox5.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.ProfessionalSystem;
+            this.kryptonComboBox5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.kryptonComboBox5.Size = new System.Drawing.Size(107, 30);
+            this.kryptonComboBox5.StateActive.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
+            this.kryptonComboBox5.StateCommon.ComboBox.Back.Color1 = System.Drawing.Color.White;
+            this.kryptonComboBox5.StateCommon.ComboBox.Border.Color1 = System.Drawing.Color.Black;
+            this.kryptonComboBox5.StateCommon.ComboBox.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
+            | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Right)));
+            this.kryptonComboBox5.StateCommon.ComboBox.Border.Rounding = 3;
+            this.kryptonComboBox5.StateCommon.ComboBox.Border.Width = 1;
+            this.kryptonComboBox5.StateCommon.ComboBox.Content.Font = new System.Drawing.Font("Tajawal", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.kryptonComboBox5.StateCommon.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
+            this.kryptonComboBox5.StateCommon.DropBack.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.kryptonComboBox5.StateNormal.ComboBox.Content.Padding = new System.Windows.Forms.Padding(10);
+            this.kryptonComboBox5.TabIndex = 24;
+            this.kryptonComboBox5.Text = "الدراسة";
+            // 
             // Test
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 590);
+            this.Controls.Add(this.kryptonComboBox5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.kryptonComboBox3);
@@ -232,6 +259,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,5 +278,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button2;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox5;
     }
 }

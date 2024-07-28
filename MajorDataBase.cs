@@ -2,6 +2,9 @@
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.Collections.Generic;
+using Irony;
+using System.Text;
 
 namespace SSA_2
 {
@@ -23,7 +26,7 @@ namespace SSA_2
             DataTable dt = new DataTable();
             try
             {
-                using(var connection = new SQLiteConnection("Data Source=DB.db"))
+                using(var connection = new SQLiteConnection(connection_stirng))
                 {
                     connection.Open();
                     using(var command = new SQLiteCommand(query,connection)) {
@@ -61,7 +64,71 @@ namespace SSA_2
             }
             return true;
         }
-        
+        internal static List<string> get_Strings(string query) 
+        { 
+            List<string> strings = new List<string>();
+            try
+            {
+                using (var connection = new SQLiteConnection(connection_stirng))
+                {
+                    connection.Open();
+                    using (var command = new SQLiteCommand(query, connection))
+                    {
+                        using (var reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                strings.Add(reader.GetString(0));
+                            }
+                        }
+                    }
+                }
+                return strings;
+            }
+            catch (SQLiteException e)
+
+            {
+                MessageBox.Show(e.Message, "get data error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return strings;
+            }
+        }
+        internal static string get_String(string query,bool numeric=false) 
+        { 
+            try
+            {
+                using (var connection = new SQLiteConnection(connection_stirng))
+                {
+                    connection.Open();
+                    using (var command = new SQLiteCommand(query, connection))
+                    {
+                        using (SQLiteDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                if (numeric)
+                                {
+                                    return reader.GetInt32(0).ToString();
+                                }                                
+                                return reader.GetString(0);
+
+                                
+                            }
+                            else
+                            {
+                                return "No data";
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            catch (SQLiteException e)
+
+            {
+                MessageBox.Show(e.Message, "get data error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return string.Empty;
+            }
+        }
         
 
     }
