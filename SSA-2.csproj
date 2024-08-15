@@ -54,7 +54,7 @@
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Navigator, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
     <Reference Include="ComponentFactory.Krypton.Toolkit">
-      <HintPath>..\..\..\Sale\Wtolls\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+      <HintPath>..\..\..\..\Sale\Wtolls\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="ComponentFactory.Krypton.Workspace">
       <HintPath>..\..\..\Sale\Wtolls\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
@@ -183,6 +183,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AddStage.Designer.cs">
+      <DependentUpon>AddStage.cs</DependentUpon>
+    </Compile>
     <Compile Include="control.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     <Compile Include="Test.Designer.cs">
       <DependentUpon>Test.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddStage.resx">
+      <DependentUpon>AddStage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="control.resx">
       <DependentUpon>control.cs</DependentUpon>
     </EmbeddedResource>

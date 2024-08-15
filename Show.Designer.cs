@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.table_show = new ComponentFactory.Krypton.Toolkit.KryptonDataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -55,6 +55,7 @@
             this.kryptonButton2 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.kryptonButton1 = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.table_show)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -89,11 +90,11 @@
             this.table_show.Name = "table_show";
             this.table_show.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.table_show.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.table_show.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.table_show.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.table_show.Size = new System.Drawing.Size(994, 578);
             this.table_show.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.table_show.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
@@ -575,5 +576,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBoxDiv;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBoxGro;
         private System.Windows.Forms.Panel panel4;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
