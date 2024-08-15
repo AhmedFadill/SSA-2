@@ -52,6 +52,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBoxStage)).BeginInit();
@@ -94,7 +95,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Tajawal Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(191, 340);
+            this.checkBox1.Location = new System.Drawing.Point(141, 340);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(79, 26);
             this.checkBox1.TabIndex = 10;
@@ -105,7 +106,7 @@
             // 
             this.checkBox2.AutoSize = true;
             this.checkBox2.Font = new System.Drawing.Font("Tajawal Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(66, 340);
+            this.checkBox2.Location = new System.Drawing.Point(42, 340);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(80, 26);
             this.checkBox2.TabIndex = 11;
@@ -131,6 +132,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.checkBox3);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.name_stage);
@@ -439,6 +441,17 @@
             this.panel5.Size = new System.Drawing.Size(5, 510);
             this.panel5.TabIndex = 3;
             // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Tajawal Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox3.Location = new System.Drawing.Point(235, 340);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(63, 26);
+            this.checkBox3.TabIndex = 21;
+            this.checkBox3.Text = "الكل";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
             // AddStage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -489,5 +502,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.CheckBox checkBox3;
     }
 }
