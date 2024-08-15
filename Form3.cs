@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace SSA_2
 {
-    public partial class AddStage : UserControl
+    public partial class Form3 : Form
     {
-        public AddStage()
+        public Form3()
         {
             InitializeComponent();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
