@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -62,8 +62,6 @@
             this.kryptonComboBox4 = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.name_student = new System.Windows.Forms.Label();
-            this.camera_barcode = new System.Windows.Forms.PictureBox();
             this.panelShowReport = new System.Windows.Forms.Panel();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.labelShowReport = new System.Windows.Forms.Label();
@@ -79,10 +77,12 @@
             this.panelListStudent = new System.Windows.Forms.Panel();
             this.labelListStudent = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.control1 = new SSA_2.control();
-            this.show1 = new SSA_2.Show();
-            this.reports1 = new SSA_2.reports();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.name_student = new System.Windows.Forms.Label();
+            this.camera_barcode = new System.Windows.Forms.PictureBox();
+            this.show1 = new SSA_2.Show();
+            this.control1 = new SSA_2.control();
+            this.reports1 = new SSA_2.reports();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -106,7 +106,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox4)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.camera_barcode)).BeginInit();
             this.panelShowReport.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.panel6.SuspendLayout();
@@ -118,6 +117,7 @@
             this.panelListStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.camera_barcode)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -213,7 +213,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0.8176615F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 99.18233F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.tableLayoutPanel1.Controls.Add(this.groupBox1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 1, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -245,7 +245,7 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(11, 11);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(985, 639);
+            this.panel4.Size = new System.Drawing.Size(984, 639);
             this.panel4.TabIndex = 1;
             // 
             // table_mainscreen
@@ -268,12 +268,12 @@
             this.table_mainscreen.Name = "table_mainscreen";
             this.table_mainscreen.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.table_mainscreen.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.table_mainscreen.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.table_mainscreen.Size = new System.Drawing.Size(985, 554);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5, 10, 5, 10);
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.table_mainscreen.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.table_mainscreen.Size = new System.Drawing.Size(984, 554);
             this.table_mainscreen.StateCommon.Background.Color1 = System.Drawing.Color.White;
             this.table_mainscreen.StateCommon.BackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.GridBackgroundList;
             this.table_mainscreen.StateCommon.DataCell.Back.Color1 = System.Drawing.Color.White;
@@ -334,7 +334,7 @@
             this.filteer_mainscreen.Dock = System.Windows.Forms.DockStyle.Top;
             this.filteer_mainscreen.Location = new System.Drawing.Point(0, 0);
             this.filteer_mainscreen.Name = "filteer_mainscreen";
-            this.filteer_mainscreen.Size = new System.Drawing.Size(985, 85);
+            this.filteer_mainscreen.Size = new System.Drawing.Size(984, 85);
             this.filteer_mainscreen.TabIndex = 2;
             // 
             // panel5
@@ -344,7 +344,7 @@
             this.panel5.Controls.Add(this.kryptonDateTimePicker1);
             this.panel5.Controls.Add(this.kryptonButton1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(581, 0);
+            this.panel5.Location = new System.Drawing.Point(580, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(404, 85);
             this.panel5.TabIndex = 15;
@@ -605,30 +605,6 @@
             this.panel3.TabIndex = 3;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // name_student
-            // 
-            this.name_student.AutoSize = true;
-            this.name_student.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name_student.Location = new System.Drawing.Point(85, 155);
-            this.name_student.Margin = new System.Windows.Forms.Padding(70, 10, 60, 20);
-            this.name_student.Name = "name_student";
-            this.name_student.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.name_student.Size = new System.Drawing.Size(61, 22);
-            this.name_student.TabIndex = 8;
-            this.name_student.Text = "الاسم : ";
-            // 
-            // camera_barcode
-            // 
-            this.camera_barcode.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.camera_barcode.Image = global::SSA_2.Properties.Resources.icon_1d;
-            this.camera_barcode.Location = new System.Drawing.Point(56, 3);
-            this.camera_barcode.Margin = new System.Windows.Forms.Padding(500, 3, 0, 3);
-            this.camera_barcode.Name = "camera_barcode";
-            this.camera_barcode.Size = new System.Drawing.Size(170, 139);
-            this.camera_barcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.camera_barcode.TabIndex = 8;
-            this.camera_barcode.TabStop = false;
-            // 
             // panelShowReport
             // 
             this.panelShowReport.BackColor = System.Drawing.Color.Transparent;
@@ -798,33 +774,6 @@
             this.pictureBox8.TabIndex = 51;
             this.pictureBox8.TabStop = false;
             // 
-            // control1
-            // 
-            this.control1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.control1.Location = new System.Drawing.Point(0, 85);
-            this.control1.Name = "control1";
-            this.control1.Size = new System.Drawing.Size(985, 554);
-            this.control1.TabIndex = 5;
-            this.control1.Visible = false;
-            // 
-            // show1
-            // 
-            this.show1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.show1.Location = new System.Drawing.Point(0, 85);
-            this.show1.Name = "show1";
-            this.show1.Size = new System.Drawing.Size(985, 554);
-            this.show1.TabIndex = 4;
-            this.show1.Visible = false;
-            // 
-            // reports1
-            // 
-            this.reports1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.reports1.Location = new System.Drawing.Point(0, 85);
-            this.reports1.Name = "reports1";
-            this.reports1.Size = new System.Drawing.Size(985, 554);
-            this.reports1.TabIndex = 6;
-            this.reports1.Visible = false;
-            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.name_student);
@@ -834,6 +783,57 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(279, 225);
             this.panel7.TabIndex = 60;
+            // 
+            // name_student
+            // 
+            this.name_student.AutoSize = true;
+            this.name_student.Font = new System.Drawing.Font("Tajawal", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_student.Location = new System.Drawing.Point(85, 155);
+            this.name_student.Margin = new System.Windows.Forms.Padding(70, 10, 60, 20);
+            this.name_student.Name = "name_student";
+            this.name_student.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.name_student.Size = new System.Drawing.Size(61, 22);
+            this.name_student.TabIndex = 8;
+            this.name_student.Text = "الاسم : ";
+            // 
+            // camera_barcode
+            // 
+            this.camera_barcode.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.camera_barcode.Image = global::SSA_2.Properties.Resources.icon_1d;
+            this.camera_barcode.Location = new System.Drawing.Point(56, 3);
+            this.camera_barcode.Margin = new System.Windows.Forms.Padding(500, 3, 0, 3);
+            this.camera_barcode.Name = "camera_barcode";
+            this.camera_barcode.Size = new System.Drawing.Size(170, 139);
+            this.camera_barcode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.camera_barcode.TabIndex = 8;
+            this.camera_barcode.TabStop = false;
+            // 
+            // show1
+            // 
+            this.show1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.show1.Location = new System.Drawing.Point(0, 85);
+            this.show1.Name = "show1";
+            this.show1.Size = new System.Drawing.Size(984, 554);
+            this.show1.TabIndex = 4;
+            this.show1.Visible = false;
+            // 
+            // control1
+            // 
+            this.control1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.control1.Location = new System.Drawing.Point(0, 85);
+            this.control1.Name = "control1";
+            this.control1.Size = new System.Drawing.Size(984, 554);
+            this.control1.TabIndex = 5;
+            this.control1.Visible = false;
+            // 
+            // reports1
+            // 
+            this.reports1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reports1.Location = new System.Drawing.Point(0, 85);
+            this.reports1.Name = "reports1";
+            this.reports1.Size = new System.Drawing.Size(984, 554);
+            this.reports1.TabIndex = 6;
+            this.reports1.Visible = false;
             // 
             // Form1
             // 
@@ -872,7 +872,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.kryptonComboBox4)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.camera_barcode)).EndInit();
             this.panelShowReport.ResumeLayout(false);
             this.panelShowReport.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
@@ -890,6 +889,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.camera_barcode)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -945,10 +945,10 @@
         private System.Windows.Forms.PictureBox camera_on;
         private System.Windows.Forms.Label name_student;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox kryptonComboBox5;
-        private Show show1;
-        private control control1;
-        private reports reports1;
         private System.Windows.Forms.Panel panel7;
+        private reports reports1;
+        private control control1;
+        private Show show1;
     }
 }
 
