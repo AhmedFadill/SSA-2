@@ -15,22 +15,21 @@ namespace SSA_2
         public Form1()
         {
             InitializeComponent();
-            table_mainscreen.Rows.Add("احمد فاضل لفته", "A", "123", true, "لا يوجد");
-            table_mainscreen.Rows.Add("علي قاسم محمد", "A", "123", false, "لا يوجد");
-            table_mainscreen.Rows.Add("عقيل علي خلف", "A", "123", false, "لا يوجد");
-            table_mainscreen.Rows.Add("محمد علي زيد", "A", "123", false, "لا يوجد");
-            table_mainscreen.Rows.Add("مهدي حيدر محمد", "A", "123", false, "لا يوجد");
-            table_mainscreen.Rows.Add("عباس عزيز كتاب", "A", "123", false, "لا يوجد");
-            table_mainscreen.Rows.Add("حيدر حسن كميل", "A", "123", false, "لا يوجد");
-            table_mainscreen.Rows.Add("علي مهدي مظلوم", "A", "123", false, "لا يوجد");
-            table_mainscreen.Rows.Add("محمد منتظر حسام", "A", "123", false, "لا يوجد");
-            table_mainscreen.Rows.Add("عباس مهدي", "A", "123", false, "لا يوجد");
-            table_mainscreen.Rows.Add("محمد رضا هشام", "A", "123", false, "لا يوجد");
+            SideBarControll(1);
+        }
+
+        private void addUserControl(UserControl userControl)
+        {
+            userControl.Dock = DockStyle.Fill;
+            panel4.Controls.Clear();
+            panel4.Controls.Add(userControl);
+            userControl.BringToFront();
+
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -75,14 +74,31 @@ namespace SSA_2
             labelListStudent.ForeColor = num == 3 ? Color.FromArgb(100, 119, 219) : Color.Black;
             labelShowReport.ForeColor = num == 4 ? Color.FromArgb(100, 119, 219) : Color.Black;
 
-            table_mainscreen.Visible = num==1? true: false;
-            filteer_mainscreen.Visible= num==1? true: false;
+            //table_mainscreen.Visible = num == 1 ? true : false;
+            //filteer_mainscreen.Visible = num == 1 ? true : false;
+            if (num == 1)
+            {
+                main m= new main();
+                addUserControl(m);
+            }
+            else if (num == 2)
+            {
+                Show s = new Show();
+                addUserControl(s);
+            }else if (num == 3)
+            {
+                control c = new control();
+                addUserControl(c);
+            }else if(num == 4)
+            {
+                reports r = new reports();
+                addUserControl(r);
+            }
+            //show1.Visible = num == 2 ? true : false;
 
-            show1.Visible = num==2? true: false;
+            //control1.Visible = num == 3 ? true : false;
 
-            control1.Visible = num==3? true: false;
-
-            reports1.Visible = num==4? true: false;
+            //reports1.Visible = num == 4 ? true : false;
         }
 
         private void panelMainScreem_Click(object sender, EventArgs e)
@@ -93,11 +109,13 @@ namespace SSA_2
         private void panelShow_Click(object sender, EventArgs e)
         {
             SideBarControll(2);
+            
         }
 
         private void panelListStudent_Click(object sender, EventArgs e)
         {
             SideBarControll(3);
+
         }
 
         private void panelShowReport_Click(object sender, EventArgs e)
@@ -115,24 +133,16 @@ namespace SSA_2
 
         }
 
-        private void pictureBox11_Click(object sender, EventArgs e)
-        {
-            camera_off.Visible = false;
-            camera_on.Visible = true;
-            camera_barcode.Visible = true;
-            name_student.Text = "احمد فاضل لفته كاظم";
-        }
-
-        private void camera_on_Click(object sender, EventArgs e)
-        {
-            camera_off.Visible = true;
-            camera_on.Visible = false;
-            camera_barcode.Visible = false;
-        }
+        
 
         private void kryptonPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
